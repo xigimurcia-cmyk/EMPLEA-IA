@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: var(--gris-claro);
+  color: var(--texto-principal);
+  min-height: 100vh;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 40px;
+  background-color: var(--gris-oscuro);
+}
+
+.btn-volver {
+  color: var(--blanco);
+  text-decoration: none;
+  font-size: 14px;
+  background-color: var(--gris-medio);
+  padding: 8px 14px;
+  border-radius: 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo-img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.logo-texto {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--blanco);
+}
+
+.naranja {
+  color: var(--naranja);
+}
+
+/* HERO */
+.hero {
+  background: linear-gradient(180deg, #1a1a1a, #2d1a00);
+  padding: 30px 40px;
+  border-radius: 0 0 30px 30px;
+}
+
+.badge-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.badge-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.badge-label {
+  font-size: 11px;
+  font-weight: bold;
+  color: var(--naranja);
+  letter-spacing: 1px;
+}
+
+.badge-marca {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--blanco);
+}
+
+.hero h1 {
+  font-size: 32px;
+  font-weight: 900;
+  color: var(--blanco);
+  margin-bottom: 8px;
+}
+
+.hero p {
+  font-size: 14px;
+  color: #aaaaaa;
+}
+
+/* FORMULARIO */
+.formulario-container {
+  padding: 40px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.formulario {
+  background-color: var(--blanco);
+  border-radius: 20px;
+  padding: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+label {
+  font-size: 11px;
+  font-weight: bold;
+  color: var(--texto-secundario);
+  letter-spacing: 1px;
+}
+
+.requerido {
+  color: var(--rojo);
+}
+
+.input-grupo {
+  display: flex;
+  align-items: center;
+  background-color: var(--gris-claro);
+  border-radius: 12px;
+  padding: 12px 16px;
+  gap: 10px;
+}
+
+.input-icono-img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.input-grupo input {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 14px;
+  color: var(--texto-principal);
+  width: 100%;
+}
+
+.input-grupo input::placeholder {
+  color: #aaaaaa;
+}
+
+.input-ojo {
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* TÉRMINOS */
+.terminos {
+  font-size: 12px;
+  color: var(--texto-secundario);
+  grid-column: 1 / -1;
+  text-align: center;
+}
+
+.terminos a {
+  text-decoration: none;
+}
+
+/* BOTÓN */
+.btn-principal {
+  background-color: var(--naranja);
+  color: white;
+  text-align: center;
+  padding: 16px;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 16px;
+  text-decoration: none;
+  display: block;
+  grid-column: 1 / -1;
+}
+
+/* LOGIN LINK */
+.login-link {
+  font-size: 13px;
+  color: var(--texto-secundario);
+  text-align: center;
+  grid-column: 1 / -1;
+}
+
+.login-link a {
+  text-decoration: none;
+  font-weight: bold;
+}

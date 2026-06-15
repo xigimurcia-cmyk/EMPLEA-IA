@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registrar Empresa — EMPLEA IA</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/registro-empresas.css">
+</head>
+<body>
+
+  
+  <header class="header">
+    <a href="portal-empresas.html" class="btn-volver">← Volver</a>
+    <div class="logo">
+      <img src="../recursos/EMPLEA IA LOGO.jpeg" alt="EMPLEA IA" class="logo-img">
+      <span class="logo-texto">EMPLEA <span class="naranja">IA</span></span>
+    </div>
+  </header>
+
+  
+  <section class="hero">
+    <div class="badge-container">
+      <img src="../recursos/EMPLEA IA LOGO.jpeg" alt="EMPLEA IA" class="badge-logo">
+      <div>
+        <span class="badge-label">PORTAL DE EMPRESAS</span>
+        <p class="badge-marca">EMPLEA <span class="naranja">IA</span></p>
+      </div>
+    </div>
+    <h1>Registrar Empresa</h1>
+    <p>Crea tu cuenta empresarial y empieza a reclutar.</p>
+  </section>
+
+  
+  <section class="formulario-container">
+    <div class="formulario">
+
+      <!-- Campo: nombre de la empresa -->
+      <div class="campo">
+        <label>NOMBRE DE LA EMPRESA <span class="requerido">*</span></label>
+        <div class="input-grupo">
+          <img src="../recursos/EMPRESANOM.jpeg" alt="" class="input-icono-img">
+          <input type="text" placeholder="Tech Solutions S.A. de C.V.">
+        </div>
+      </div>
+
+      
+      <div class="campo">
+        <label>CORREO EMPRESARIAL <span class="requerido">*</span></label>
+        <div class="input-grupo">
+          <img src="../recursos/CORREOEMP.jpeg" alt="" class="input-icono-img">
+          <input type="email" placeholder="rh@empresa.mx">
+        </div>
+      </div>
+
+      <!-- Campo: teléfono empresarial -->
+      <div class="campo">
+        <label>TELÉFONO EMPRESARIAL <span class="requerido">*</span></label>
+        <div class="input-grupo">
+          <img src="../recursos/TELEFONOEMP.jpeg" alt="" class="input-icono-img">
+          <input type="tel" placeholder="+52 656 000 0000">
+        </div>
+      </div>
+
+      <!-- Campo: contraseña con ojito para mostrar/ocultar -->
+      <div class="campo">
+        <label>CONTRASEÑA <span class="requerido">*</span></label><!-- Label: etiqueta que describe el campo -->
+        <div class="input-grupo">
+          <img src="../recursos/CONTRASENA EMPR.jpeg" alt="" class="input-icono-img">
+          <input type="password" placeholder="........" id="password">
+          <span class="input-ojo" onclick="mostrarContrasena('password')"></span>
+        </div>
+      </div>
+
+      <!-- Campo: confirmar contraseña  -->  
+      <div class="campo">
+        <label>CONFIRMAR CONTRASEÑA <span class="requerido">*</span></label>
+        <div class="input-grupo">
+          <img src="../recursos/confirmarCONTRAEMPR.jpeg" alt="" class="input-icono-img">
+          <input type="password" placeholder="........" id="password2"><!-- id="password2" tiene nombre diferente para que el JS los distinga -->
+          <span class="input-ojo" onclick="mostrarContrasena('password2')"></span>
+        </div>
+      </div>
+
+     
+      <!-- Link para ir al login -->
+       <p class="terminos">Al registrarte aceptas los <a href="#" class="naranja">Términos de Servicio</a> y la Política de Privacidad.</p>
+
+      <a href="dashboard-empresas.html" class="btn-principal">REGISTRARSE →</a>
+
+      <p class="login-link">¿Ya tienes cuenta? <a href="login-empresas.html" class="naranja">Iniciar sesión</a></p>
+
+    </div>
+  </section>
+
+  <!-- Script para mostrar/ocultar contraseña -->
+  <script src="../js/script.js"></script>
+
+</body>
+</html>
