@@ -162,6 +162,12 @@ label {
 .input-ojo {
   cursor: pointer;
   font-size: 16px;
+  color: #aaaaaa;
+  user-select: none;
+}
+
+.input-ojo:hover {
+  color: var(--naranja);
 }
 
 /* TÉRMINOS */

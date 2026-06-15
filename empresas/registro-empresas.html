@@ -9,7 +9,7 @@
 </head>
 <body>
 
-  
+  <!-- HEADER -->
   <header class="header">
     <a href="portal-empresas.html" class="btn-volver">← Volver</a>
     <div class="logo">
@@ -18,9 +18,8 @@
     </div>
   </header>
 
-  
+  <!-- HERO -->
   <section class="hero">
-    <div class="badge-container">
       <img src="../recursos/EMPLEA IA LOGO.jpeg" alt="EMPLEA IA" class="badge-logo">
       <div>
         <span class="badge-label">PORTAL DE EMPRESAS</span>
@@ -31,11 +30,11 @@
     <p>Crea tu cuenta empresarial y empieza a reclutar.</p>
   </section>
 
-  
+  <!-- FORMULARIO -->
   <section class="formulario-container">
     <div class="formulario">
 
-      <!-- Campo: nombre de la empresa -->
+      <!-- Nombre -->
       <div class="campo">
         <label>NOMBRE DE LA EMPRESA <span class="requerido">*</span></label>
         <div class="input-grupo">
@@ -44,7 +43,7 @@
         </div>
       </div>
 
-      
+      <!-- Correo -->
       <div class="campo">
         <label>CORREO EMPRESARIAL <span class="requerido">*</span></label>
         <div class="input-grupo">
@@ -53,7 +52,7 @@
         </div>
       </div>
 
-      <!-- Campo: teléfono empresarial -->
+      <!-- Teléfono -->
       <div class="campo">
         <label>TELÉFONO EMPRESARIAL <span class="requerido">*</span></label>
         <div class="input-grupo">
@@ -62,38 +61,38 @@
         </div>
       </div>
 
-      <!-- Campo: contraseña con ojito para mostrar/ocultar -->
+      <!-- Contraseña -->
       <div class="campo">
-        <label>CONTRASEÑA <span class="requerido">*</span></label><!-- Label: etiqueta que describe el campo -->
+        <label>CONTRASEÑA <span class="requerido">*</span></label>
         <div class="input-grupo">
           <img src="../recursos/CONTRASENA EMPR.jpeg" alt="" class="input-icono-img">
-          <input type="password" placeholder="........" id="password">
+          <input type="password" placeholder="••••••••" id="password">
           <span class="input-ojo" onclick="mostrarContrasena('password')"></span>
         </div>
       </div>
 
-      <!-- Campo: confirmar contraseña  -->  
+      <!-- Confirmar contraseña -->
       <div class="campo">
         <label>CONFIRMAR CONTRASEÑA <span class="requerido">*</span></label>
         <div class="input-grupo">
-          <img src="../recursos/confirmarCONTRAEMPR.jpeg" alt="" class="input-icono-img">
-          <input type="password" placeholder="........" id="password2"><!-- id="password2" tiene nombre diferente para que el JS los distinga -->
+          <img src="../recursos/CONTRASENA EMPR.jpeg" alt="" class="input-icono-img">
+          <input type="password" placeholder="••••••••" id="password2">
           <span class="input-ojo" onclick="mostrarContrasena('password2')"></span>
         </div>
       </div>
 
-     
-      <!-- Link para ir al login -->
-       <p class="terminos">Al registrarte aceptas los <a href="#" class="naranja">Términos de Servicio</a> y la Política de Privacidad.</p>
+      <!-- Términos -->
+      <p class="terminos">Al registrarte aceptas los <a href="#" class="naranja">Términos de Servicio</a> y la Política de Privacidad.</p>
 
+      <!-- Botón -->
       <a href="dashboard-empresas.html" class="btn-principal">REGISTRARSE →</a>
 
+      <!-- Link login -->
       <p class="login-link">¿Ya tienes cuenta? <a href="login-empresas.html" class="naranja">Iniciar sesión</a></p>
 
     </div>
   </section>
 
-  <!-- Script para mostrar/ocultar contraseña -->
   <script src="../js/script.js"></script>
 
 </body>
