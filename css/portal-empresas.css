@@ -1,0 +1,206 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #0d0d0d;
+  color: var(--blanco);
+  min-height: 100vh;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 40px;
+  background-color: var(--gris-oscuro);
+}
+
+.btn-volver {
+  color: var(--blanco);
+  text-decoration: none;
+  font-size: 14px;
+  background-color: #2d2d2d;
+  padding: 8px 14px;
+  border-radius: 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo-img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.logo-texto {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--blanco);
+}
+
+.naranja { color: var(--naranja); }
+
+/* HERO */
+.hero {
+  background: linear-gradient(180deg, #1a1a1a, #2d1a00);
+  padding: 60px 10%;
+  border-radius: 0 0 30px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.hero-contenido {
+  flex: 1;
+}
+
+.hero-logo {
+  flex: 0 0 250px;
+}
+
+.hero-logo img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+/* ESTADISTICAS */
+.estadisticas {
+  display: flex;
+  gap: 40px;
+  margin-top: 10px;
+}
+
+.stat { display: flex; 
+    flex-direction: column; }
+
+.stat-num {
+  font-size: 28px;
+  font-weight: 900;
+}
+
+.stat-label {
+  font-size: 13px;
+  color: #aaaaaa;
+}
+
+/* BOTONES */
+.botones {
+  background-color: var(--gris-claro);
+  padding: 40px 10%;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  justify-content: center;
+}
+
+.btn-principal {
+  background-color: var(--naranja);
+  color: white;
+  text-align: center;
+  padding: 16px 40px;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 16px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-secundario {
+  background-color: var(--blanco);
+  color: var(--gris-oscuro);
+  text-align: center;
+  padding: 16px 40px;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 16px;
+  text-decoration: none;
+  display: inline-block;
+  border: 1px solid #ddd;
+}
+
+/* BENEFICIOS */
+.beneficios {
+  background-color: var(--gris-claro);
+  padding: 40px 10%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.beneficios-titulo {
+  font-size: 11px;
+  font-weight: bold;
+  color: #999;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+  grid-column: 1 / -1;
+}
+
+.beneficio-card {
+  background-color: var(--blanco);
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.beneficio-icono {
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.beneficio-card h3 {
+  font-size: 15px;
+  font-weight: bold;
+  color: var(--gris-oscuro);
+  margin-bottom: 4px;
+}
+
+.beneficio-card p {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* INCLUYE TODO ESTO */
+.incluye {
+  background-color: var(--gris-medio);
+  margin: 40px 10%;
+  border-radius: 20px;
+  padding: 40px;
+}
+
+.incluye-titulo {
+  color: var(--naranja);
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+}
+
+.incluye-lista {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.incluye-lista li {
+  color: var(--blanco);
+  font-size: 14px;
+}
