@@ -7,3 +7,5 @@ function mostrarContrasena(id) {
     input.type = "password";                 // lo oculta
   }
 }
+
+
