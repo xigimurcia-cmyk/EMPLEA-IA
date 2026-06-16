@@ -3,22 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Iniciar Sesión — EMPLEA IA</title>
+  <title>Recuperar Contraseña — EMPLEA IA</title>
+
+  <!-- 1. Primero: variables globales de colores (obligatorio en todos) -->
   <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="../css/login-empresas.css">
+  <!-- 2. Después: el CSS propio de esta pantalla -->
+  <link rel="stylesheet" href="../css/recuperar-contrasena-empresas.css">
 </head>
 <body>
 
-  <!-- HEADER -->
+ 
+  <!-- Tiene el botón de volver y el logo de EMPLEA IA -->
+ 
   <header class="header">
-    <a href="portal-empresas.html" class="btn-volver">← Volver</a>
+    <!-- Regresa al login de empresas -->
+    <a href="login-empresas.html" class="btn-volver">← Volver</a>
     <div class="logo">
       <img src="../recursos/EMPLEA IA LOGO.jpeg" alt="EMPLEA IA" class="logo-img">
       <span class="logo-texto">EMPLEA <span class="naranja">IA</span></span>
     </div>
   </header>
 
-  <!-- HERO -->
+  <!--  "PORTAL DE EMPRESAS" y el título de la pantalla -->
+ 
   <section class="hero">
     <div class="badge-container">
       <img src="../recursos/EMPLEA IA LOGO.jpeg" alt="EMPLEA IA" class="badge-logo">
@@ -27,38 +34,31 @@
         <p class="badge-marca">EMPLEA <span class="naranja">IA</span></p>
       </div>
     </div>
-    <h1>Iniciar Sesión</h1>
-    <p>Accede a tu panel de reclutamiento IA.</p>
+    <h1>Recuperar Contraseña</h1>
+    <p>Ingresa tu correo y te enviaremos un enlace para restablecer tu contraseña.</p>
   </section>
 
-  <!-- FORMULARIO -->
+
+
   <section class="formulario-container">
     <div class="formulario">
 
-      <!-- Campo: correo -->
+      <!-- Campo: correo electrónico de la empresa -->
       <div class="campo">
         <label>CORREO EMPRESARIAL <span class="requerido">*</span></label>
         <div class="input-grupo">
           <img src="../recursos/CORREOEMP.jpeg" alt="" class="input-icono-img">
           <input type="email" placeholder="rh@empresa.mx">
         </div>
+        
+        <p class="texto-ayuda">Recibirás un enlace válido por 30 minutos.</p>
       </div>
 
-      <!-- Campo: contraseña -->
-      <div class="campo">
-        <label>CONTRASEÑA <span class="requerido">*</span></label>
-        <div class="input-grupo">
-          <img src="../recursos/CONTRASENA EMPR.jpeg" alt="" class="input-icono-img">
-        <input type="password" placeholder="••••••••" id="password" autocomplete="new-password">
-        </div>
-        <a href="recuperar-contrasena-empresas.html" class="naranja olvide">¿Olvidaste tu contraseña?</a>
-      </div>
+   
+      <a href="#" class="btn-principal">ENVIAR ENLACE DE RECUPERACIÓN</a>
 
-      <!-- Botón -->
-      <a href="dashboard-empresas.html" class="btn-principal">INICIAR SESIÓN →</a>
-
-      <!-- Link registro -->
-      <p class="login-link">¿No tienes cuenta? <a href="registro-empresas.html" class="naranja">Registrar empresa</a></p>
+      
+      <p class="login-link">¿Recuerdas tu contraseña? <a href="login-empresas.html" class="naranja">Ingresar</a></p>
 
     </div>
   </section>
