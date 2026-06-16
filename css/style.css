@@ -10,8 +10,15 @@
   --amarillo:          #FFC107;
   --rojo:              #EF4444;
   --azul:              #3B82F6;
+  --azul-claro:        #DBEAFE;
   --purpura:           #8B5CF6;
   --texto-principal:   #1A1A1A;
   --texto-secundario:  #6B6B6B;
   --texto-claro:       #D1D1D1;
+  
+
+}
+
+input[type="password"]::-ms-reveal {
+  display: none;
 }
