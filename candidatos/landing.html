@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emplea IA – Tu próximo trabajo está más cerca</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/landing.css">
+
+  <style>
+    /* 🛠️ CONFIGURACIÓN PARA QUE EL BOTÓN RESALTE AL MÁXIMO */
+    .btn-outline {
+      background-color: #1A1008 !important; /* Fondo oscuro sólido (combina con la marca) */
+      color: #FFFFFF !important;            /* Letras blancas hiper legibles */
+      border: 2px solid #1A1008 !important; /* Borde oscuro para dar definición */
+      padding: 16px 24px !important;        /* Buen tamaño de botón */
+      border-radius: 16px !important;       /* Bordes redondeados idénticos al naranja */
+      font-weight: 700 !important;          /* Letras gruesas en negrita */
+      display: block !important;            /* Ocupa su propio bloque */
+      text-align: center !important;
+      text-decoration: none !important;
+      box-sizing: border-box !important;
+      transition: all 0.2s ease !important;
+      margin-top: 5px !important;           /* Separación perfecta del botón de arriba */
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); /* Sombra elegante */
+    }
+
+    /* Efecto interactivo al pasar el mouse o pulsar con el dedo */
+    .btn-outline:hover {
+      background-color: #231508 !important; /* Se aclara un poquito el fondo oscuro */
+      border-color: #231508 !important;
+      transform: translateY(-1px);
+    }
+
+    /* Forzar que los dos botones compartan la misma estructura exacta */
+    .btn-full {
+      display: block !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- SPLASH SCREEN -->
+  <div id="splash" class="splash">
+    <div class="splash-bg">
+      <svg class="splash-lines" viewBox="0 0 320 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line x1="160" y1="0" x2="0" y2="500" stroke="#E8822A" stroke-width="0.8" stroke-opacity="0.25"/>
+        <line x1="160" y1="0" x2="320" y2="500" stroke="#E8822A" stroke-width="0.8" stroke-opacity="0.25"/>
+        <line x1="160" y1="60" x2="30" y2="480" stroke="#E8822A" stroke-width="0.6" stroke-opacity="0.15"/>
+        <line x1="160" y1="60" x2="290" y2="480" stroke="#E8822A" stroke-width="0.6" stroke-opacity="0.15"/>
+        <line x1="160" y1="120" x2="70" y2="460" stroke="#E8822A" stroke-width="0.5" stroke-opacity="0.1"/>
+        <line x1="160" y1="120" x2="250" y2="460" stroke="#E8822A" stroke-width="0.5" stroke-opacity="0.1"/>
+      </svg>
+    </div>
+
+    <div class="splash-content">
+      <div class="splash-logo">
+        <img src="../img/logo.jpg" alt="Emplea IA" class="splash-logo-img" />
+      </div>
+
+      <p class="splash-tagline">POWERED BY ARTIFICIAL INTELLIGENCE</p>
+
+      <div class="splash-chips">
+        <span class="chip">Match IA</span>
+        <span class="chip">Análisis CV</span>
+        <span class="chip">Cursos IA</span>
+        <span class="chip">Reclutamiento</span>
+      </div>
+
+      <div class="splash-stats">
+        <div class="stat">
+          <span class="stat-value">50K+</span>
+          <span class="stat-label">Candidatos</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">2.4K</span>
+          <span class="stat-label">Empresas</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">87%</span>
+          <span class="stat-label">IA Match</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="splash-footer">
+      <div class="splash-loading">
+        <span class="loading-label">Cargando plataforma</span>
+        <span class="loading-pct">38%</span>
+      </div>
+      <div class="loading-track">
+        <div class="loading-bar" id="loadingBar"></div>
+      </div>
+
+      <button class="btn-primary btn-full" onclick="showLanding()">
+        COMENZAR AHORA →
+      </button>
+    </div>
+  </div>
+
+  <!-- LANDING / HERO -->
+  <div id="landing" class="landing hidden">
+
+    <section class="hero">
+      <header class="hero-header">
+        <div class="header-logo">
+          <img src="../img/logo.jpg" alt="Emplea IA" class="header-logo-img" />
+          <span class="header-brand">EMPLEA <span class="orange">IA</span></span>
+        </div>
+      </header>
+
+      <div class="hero-body">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          PLATAFORMA IA PREMIUM
+        </div>
+
+        <h1 class="hero-title">
+          Tu próximo<br/>trabajo está<br/>más cerca<br/>que nunca.
+        </h1>
+
+        <p class="hero-desc">
+          Conectamos talento con oportunidades usando Gemini IA para un match perfecto entre candidatos y empresas.
+        </p>
+
+        <div class="feature-cards">
+          <div class="feat-card">
+            <span class="feat-icon">⚡</span>
+            <span class="feat-name">Match IA</span>
+            <span class="feat-sub">Instantáneo</span>
+          </div>
+          <div class="feat-card">
+            <span class="feat-icon">📈</span>
+            <span class="feat-name">Análisis CV</span>
+            <span class="feat-sub">Gemini AI</span>
+          </div>
+          <div class="feat-card">
+            <span class="feat-icon">🛡️</span>
+            <span class="feat-name">Verificado</span>
+            <span class="feat-sub">100% seguro</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN DE BOTONES CORREGIDA -->
+    <section class="cta-section" style="display: flex; flex-direction: column; gap: 12px;">
+      <a href="registro.html" class="btn-primary btn-full">Crear Cuenta Gratis</a>
+      
+      <!-- NUEVO ENLACE CON MÁS VISIBILIDAD -->
+      <a href="login.html" class="btn-outline btn-full">Ya tengo cuenta — Ingresar</a>
+      
+      <a href="recuperar-contraseña.html" class="link-orange" style="margin-top: 8px;">¿Olvidaste tu contraseña?</a>
+      <a href="#empresa" class="link-gray">¿Eres empresa?</a>
+
+      <div class="empresa-card" id="empresa">
+        <div class="empresa-icon">🏢</div>
+        <div class="empresa-info">
+          <span class="empresa-eyebrow">¿ESTÁS CONTRATANDO?</span>
+          <span class="empresa-title">Portal de Empresas</span>
+          <span class="empresa-sub">Publica vacantes · Revisa candidatos</span>
+        </div>
+        <span class="empresa-arrow">›</span>
+      </div>
+
+      <div class="legal-links">
+        <a href="#">Términos y Condiciones</a>
+        <span>·</span>
+        <a href="#">Política de Privacidad</a>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    let pct = 38;
+    const bar = document.getElementById('loadingBar');
+    bar.style.width = pct + '%';
+
+    const interval = setInterval(() => {
+      pct += Math.random() * 4;
+      if (pct >= 100) { pct = 100; clearInterval(interval); }
+      bar.style.width = pct + '%';
+      document.querySelector('.loading-pct').textContent = Math.floor(pct) + '%';
+    }, 200);
+
+    function showLanding() {
+      document.getElementById('splash').classList.add('fade-out');
+      setTimeout(() => {
+        document.getElementById('splash').classList.add('hidden');
+        document.getElementById('landing').classList.remove('hidden');
+        document.getElementById('landing').classList.add('fade-in');
+      }, 400);
+    }
+  </script>
+</body>
+</html>
