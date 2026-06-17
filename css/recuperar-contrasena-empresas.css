@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -11,10 +12,9 @@ body {
   min-height: 100vh;
 }
 
-/* HEADER */
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* botón a la izquierda, logo a la derecha */
   align-items: center;
   padding: 16px 40px;
   background-color: var(--gris-oscuro);
@@ -26,7 +26,7 @@ body {
   font-size: 14px;
   background-color: var(--gris-medio);
   padding: 8px 14px;
-  border-radius: 20px;
+  border-radius: 20px; /* pill shape */
 }
 
 .logo {
@@ -38,7 +38,7 @@ body {
 .logo-img {
   width: 35px;
   height: 35px;
-  border-radius: 50%;
+  border-radius: 50%; /* logo redondo */
   object-fit: cover;
 }
 
@@ -48,13 +48,14 @@ body {
   color: var(--blanco);
 }
 
+/* Color de acento naranja, usado en varias partes (logo, links, etc.) */
 .naranja { color: var(--naranja); }
 
-/* HERO */
+
 .hero {
   background: linear-gradient(180deg, #1a1a1a, #2d1a00);
   padding: 60px 40px;
-  border-radius: 0 0 30px 30px;
+  border-radius: 0 0 30px 30px; 
 }
 
 .badge-container {
@@ -75,7 +76,7 @@ body {
   font-size: 11px;
   font-weight: bold;
   color: var(--naranja);
-  letter-spacing: 1px;
+  letter-spacing: 1px; 
 }
 
 .badge-marca {
@@ -96,11 +97,10 @@ body {
   color: #aaaaaa;
 }
 
-/* FORMULARIO */
 .formulario-container {
   padding: 40px;
-  max-width: 600px;
-  margin: 0 auto;
+  max-width: 600px; 
+  margin: 0 auto; 
 }
 
 .formulario {
@@ -110,12 +110,15 @@ body {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  align-items: center; 
+  text-align: center;
 }
 
 .campo {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  width: 100%;
 }
 
 label {
@@ -123,9 +126,10 @@ label {
   font-weight: bold;
   color: var(--texto-secundario);
   letter-spacing: 1px;
+  text-align: left;
 }
 
-.requerido { color: var(--rojo); }
+.requerido { color: var(--rojo); } 
 
 .input-grupo {
   display: flex;
@@ -135,8 +139,6 @@ label {
   padding: 12px 16px;
   gap: 10px;
 }
-
-.input-icono { font-size: 16px; }
 
 .input-icono-img {
   width: 20px;
@@ -157,30 +159,24 @@ label {
   color: #aaaaaa;
 }
 
-.input-ojo img {
-  width: 20px;
-  height: 20px;
-  object-fit: contain;
-  cursor: pointer;
+.texto-ayuda {
+  font-size: 12px;
+  color: var(--texto-secundario);
+  text-align: left;
 }
 
-.olvide {
-  font-size: 13px;
-  text-align: right;
-  text-decoration: none;
-  font-weight: bold;
-}
 
 .btn-principal {
   background-color: var(--naranja);
   color: white;
   text-align: center;
   padding: 16px;
-  border-radius: 30px;
+  border-radius: 30px; 
   font-weight: bold;
   font-size: 16px;
   text-decoration: none;
   display: block;
+  width: 100%;
 }
 
 .login-link {

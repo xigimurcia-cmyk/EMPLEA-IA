@@ -1,0 +1,255 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: var(--gris-claro);
+  color: var(--texto-principal);
+  min-height: 100vh;
+}
+
+
+.hero {
+  background: linear-gradient(180deg, #1a1a1a, #2d1a00);
+  padding: 24px 24px 32px;
+  border-radius: 0 0 30px 30px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn-menu {
+  position: absolute;
+  left: 24px;
+  top: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--gris-medio);
+  color: var(--blanco);
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.hero-titulo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.hero-logo {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.hero-titulo h1 {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--blanco);
+}
+
+
+.agenda-top {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px 24px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contador {
+  font-size: 22px;
+  font-weight: 900;
+}
+.btn-agendar {
+  background-color: var(--naranja);
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 12px 20px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+}
+
+
+.agenda-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px 24px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cita-card {
+  background-color: var(--blanco);
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.cita-encabezado {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.circulo-nombre {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+
+.circulo-naranja { background-color: var(--naranja); }
+.circulo-azul { background-color: var(--azul); }
+.circulo-verde { background-color: var(--verde); }
+
+.cita-nombre {
+  flex: 1;
+}
+
+.cita-nombre h3 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.cita-nombre p {
+  font-size: 13px;
+  color: var(--texto-secundario);
+}
+
+/* Badge de modalidad: Video o Presencial */
+.modalidad {
+  font-size: 12px;
+  font-weight: bold;
+  padding: 6px 14px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+/* CORREGIDO: ya usa variable en vez de color directo */
+.modalidad.video {
+  background-color: var(--azul-claro);
+  color: var(--azul);
+}
+
+.modalidad.presencial {
+  background-color: var(--durazno);
+  color: var(--naranja);
+}
+
+/* Cajitas de fecha y hora */
+.cita-detalles {
+  display: flex;
+  gap: 12px;
+}
+
+.detalle-cajita {
+  flex: 1;
+  background-color: var(--gris-claro);
+  border-radius: 12px;
+  padding: 10px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.detalle-label {
+  font-size: 11px;
+  font-weight: bold;
+  color: var(--texto-secundario);
+  letter-spacing: 1px;
+  margin-bottom: 2px;
+}
+
+.detalle-valor {
+  font-size: 15px;
+  font-weight: bold;
+  color: var(--texto-principal);
+}
+
+/* ============================== */
+/* FORMULARIO: Nueva Entrevista */
+/* ============================== */
+.form-entrevista {
+  display: none;
+  max-width: 900px;
+  margin: 0 auto 16px;
+  background-color: var(--blanco);
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.form-entrevista h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.campo-form {
+  margin-bottom: 16px;
+}
+
+.campo-form label {
+  display: block;
+  font-size: 11px;
+  font-weight: bold;
+  color: var(--texto-secundario);
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+
+.campo-form input {
+  width: 100%;
+  background-color: var(--gris-claro);
+  border: none;
+  border-radius: 12px;
+  padding: 14px 16px;
+  font-size: 14px;
+  color: var(--texto-principal);
+  outline: none;
+}
+
+.botones-form {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.btn-cancelar, .btn-guardar {
+  flex: 1;
+  padding: 14px;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-cancelar {
+  background-color: var(--gris-claro);
+  color: var(--texto-principal);
+}
+
+.btn-guardar {
+  background-color: var(--naranja);
+  color: white;
+}

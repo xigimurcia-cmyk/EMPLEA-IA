@@ -1,0 +1,24 @@
+:root {
+  --naranja:           #FF7A00;
+  --naranja-claro:     #FFA64D;
+  --durazno:           #FFE0CC;
+  --gris-oscuro:       #1A1A1A;
+  --gris-medio:        #2D2D2D;
+  --gris-claro:        #F5F5F5;
+  --blanco:            #FFFFFF;
+  --verde:             #22C55E;
+  --amarillo:          #FFC107;
+  --rojo:              #EF4444;
+  --azul:              #3B82F6;
+  --azul-claro:        #DBEAFE;
+  --purpura:           #8B5CF6;
+  --texto-principal:   #1A1A1A;
+  --texto-secundario:  #6B6B6B;
+  --texto-claro:       #D1D1D1;
+  
+
+}
+
+input[type="password"]::-ms-reveal {
+  display: none;
+}
