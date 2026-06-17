@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
   <link rel="stylesheet" href="../css/registro.css" />
 </head>
 <body>
@@ -18,7 +19,7 @@
     </a>
 
     <div class="header-logo">
-      <img src="../img/logo.jpg" alt="Emplea IA" class="header-logo-img" />
+      <img src="../recursos/EMPLEA IA LOGO.jpeg" alt="Emplea IA" class="header-logo-img" />
       <span class="header-brand">EMPLEA <span class="orange">IA</span></span>
     </div>
 
@@ -101,7 +102,7 @@
     </button>
 
     <p class="login-link">
-      ¿Ya tienes cuenta? <a href="index.html" class="link-orange">Ingresar</a>
+      ¿Ya tienes cuenta? <a href="login.html" class="link-orange">Ingresar</a>
     </p>
 
   </form>
@@ -117,17 +118,17 @@
     // Controla el registro de datos y avanza de pantalla
     function handleRegister(event) {
       event.preventDefault(); // Evita que la página se recargue bruscamente
-      
+
       // Captura los valores de los inputs en tiempo real
       const name = document.getElementById('reg-name').value.trim();
       const lastname = document.getElementById('reg-lastname').value.trim();
-      
+
       // Valida que los campos no contengan solo espacios en blanco
       const fullName = `${name} ${lastname}`.trim() || "Itzel Silva";
-      
+
       // Almacenamos el nombre completo de forma local
       localStorage.setItem("usuarioNombre", fullName);
-      
+
       // Redirección inmediata al dashboard dentro de candidatos/
       window.location.href = "dashboard.html";
     }
