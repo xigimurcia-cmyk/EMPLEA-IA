@@ -436,3 +436,46 @@ body {
   background: rgba(255,122,0,0.2);
   color: var(--naranja);
 }
+
+.bottom-nav {
+  display: none; /* oculto en escritorio, el menú vive en el sidebar */
+}
+@media (max-width: 850px) {
+  .bottom-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: var(--blanco);
+    border-top: 1px solid rgba(0,0,0,0.08);
+    padding: 8px 2px;
+    z-index: 100;
+  }
+
+  .nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    text-decoration: none;
+    color: var(--texto-secundario);
+    font-size: 9px;
+    flex: 1;
+    text-align: center;
+  }
+
+  .nav-item.active {
+    color: var(--naranja);
+  }
+
+  .nav-icon {
+    font-size: 15px;
+  }
+
+  .main {
+    padding-bottom: 70px;
+  }
+}
