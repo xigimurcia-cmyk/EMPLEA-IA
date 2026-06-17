@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agenda — EMPLEA IA</title>
+
+  <!-- 1. Primero: variables globales de colores (obligatorio en todos) -->
+  <link rel="stylesheet" href="../css/style.css">
+  <!-- 2. Después: el CSS propio de esta pantalla -->
+  <link rel="stylesheet" href="../css/agenda-empresas.css">
+</head>
+<body>
+
+
+  <section class="hero">
+    <!-- Botón de menú (por ahora decorativo, sin funcionalidad real) -->
+    <button class="btn-menu">☰</button>
+
+    
+    <div class="hero-titulo">
+      <img src="../recursos/EMPLEA IA LOGO.jpeg" alt="EMPLEA IA" class="hero-logo">
+      <h1>Agenda</h1>
+    </div>
+  </section>
+
+  
+  <section class="agenda-top">
+    <h2 class="contador">4 entrevistas</h2>
+    <button class="btn-agendar" onclick="abrirFormulario()">+ Agendar</button>
+  </section>
+
+ 
+  <section class="form-entrevista" id="formEntrevista">
+    <h3>Nueva Entrevista</h3>
+
+    <div class="campo-form">
+      <label>CANDIDATO</label>
+      <input type="text" placeholder="Nombre del candidato">
+    </div>
+
+    <div class="campo-form">
+      <label>FECHA</label>
+      <input type="date">
+    </div>
+
+    <div class="campo-form">
+      <label>HORA</label>
+      <input type="text" placeholder="10:00 AM">
+    </div>
+
+    <div class="campo-form">
+      <label>MODALIDAD</label>
+      <input type="text" placeholder="Video / Presencial">
+    </div>
+
+    <div class="botones-form">
+      <button class="btn-cancelar" onclick="cerrarFormulario()">Cancelar</button>
+      <button class="btn-guardar" onclick="cerrarFormulario()">Guardar</button>
+    </div>
+  </section>
+
+ 
+  <section class="agenda-container">
+
+    <!-- Tarjeta de entrevista -->
+    <div class="cita-card">
+      <div class="cita-encabezado">
+        <div class="circulo-nombre circulo-naranja">XM</div>
+        <div class="cita-nombre">
+          <h3>Xitlaly Murcia</h3>
+          <p>Frontend Developer</p>
+        </div>
+        <span class="modalidad video">Video</span>
+      </div>
+      <div class="cita-detalles">
+        <div class="detalle-cajita">
+          <span class="detalle-label">FECHA</span>
+          <span class="detalle-valor">12 Jun 2026</span>
+        </div>
+        <div class="detalle-cajita">
+          <span class="detalle-label">HORA</span>
+          <span class="detalle-valor">10:00 AM</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tarjeta de entrevista -->
+    <div class="cita-card">
+      <div class="cita-encabezado">
+        <div class="circulo-nombre circulo-azul">CR</div>
+        <div class="cita-nombre">
+          <h3>Carlos Reyes</h3>
+          <p>Backend Developer</p>
+        </div>
+        <span class="modalidad presencial">Presencial</span>
+      </div>
+      <div class="cita-detalles">
+        <div class="detalle-cajita">
+          <span class="detalle-label">FECHA</span>
+          <span class="detalle-valor">13 Jun 2026</span>
+        </div>
+        <div class="detalle-cajita">
+          <span class="detalle-label">HORA</span>
+          <span class="detalle-valor">3:00 PM</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tarjeta de entrevista -->
+    <div class="cita-card">
+      <div class="cita-encabezado">
+        <div class="circulo-nombre circulo-verde">AF</div>
+        <div class="cita-nombre">
+          <h3>Ana Flores</h3>
+          <p>UX/UI Designer</p>
+        </div>
+        <span class="modalidad video">Video</span>
+      </div>
+      <div class="cita-detalles">
+        <div class="detalle-cajita">
+          <span class="detalle-label">FECHA</span>
+          <span class="detalle-valor">14 Jun 2026</span>
+        </div>
+        <div class="detalle-cajita">
+          <span class="detalle-label">HORA</span>
+          <span class="detalle-valor">11:30 AM</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4ta tarjeta (la del diseño se corta abajo, agrega los datos reales cuando los tengas) -->
+    <div class="cita-card">
+      <div class="cita-encabezado">
+        <div class="circulo-nombre circulo-naranja">AM
+        </div>
+        <div class="cita-nombre">
+          <h3>Nombre Candidato</h3>
+          <p>Puesto</p>
+        </div>
+        <span class="modalidad presencial">Presencial</span>
+      </div>
+      <div class="cita-detalles">
+        <div class="detalle-cajita">
+          <span class="detalle-label">FECHA</span>
+          <span class="detalle-valor">15 Jun 2026</span>
+        </div>
+        <div class="detalle-cajita">
+          <span class="detalle-label">HORA</span>
+          <span class="detalle-valor">9:00 AM</span>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <script src="../js/script.js"></script>
+
+</body>
+</html>
