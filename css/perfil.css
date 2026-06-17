@@ -9,16 +9,6 @@
 }
 
 :root {
-    --orange:      #E8822A;
-    --orange-dark: #C96A18;
-    --bg-dark:     #1A1008;
-    --bg-light:    #F5F1EC;
-    --bg-white:    #FFFFFF;
-    --text-white:  #FFFFFF;
-    --text-dark:   #1A1008;
-    --text-muted:  #9A8872;
-    --text-gray:   #6B5E50;
-    --input-bg:    #F0EDE8;
     --radius-lg:   16px;
     --radius-md:   12px;
     --font:        'Inter', sans-serif;
@@ -26,60 +16,102 @@
 
 body {
     font-family: var(--font);
-    background-color: #e0dbd5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: var(--gris-claro);
     min-height: 100vh;
     -webkit-font-smoothing: antialiased;
 }
 
-/* Contenedor tipo teléfono móvil */
-.mobile-container {
-    width: 100%;
-    max-width: 410px;
-    background-color: var(--bg-light);
-    border-radius: 30px;
-    box-shadow: 0 12px 35px rgba(0,0,0,0.15);
-    overflow: hidden;
+.naranja { color: var(--naranja); }
+
+/* ═══════════════════════════════════════════
+   LAYOUT GENERAL (sidebar + contenido)
+   ════════════════════════════════════════ */
+.app-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* --- SIDEBAR (escritorio) --- */
+.sidebar {
+    width: 240px;
+    flex-shrink: 0;
+    background-color: var(--gris-oscuro);
     display: flex;
     flex-direction: column;
-    position: relative;
-    padding-bottom: 75px;
-    min-height: 840px;
+    padding: 24px 0;
+}
+
+.sidebar-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 24px 32px;
+}
+
+.sidebar-logo {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.sidebar-brand-text {
+    color: var(--blanco);
+    font-weight: 800;
+    font-size: 16px;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 24px;
+    text-decoration: none;
+    color: rgba(255,255,255,0.6);
+    font-size: 14px;
+    font-weight: 600;
+    border-left: 3px solid transparent;
+    transition: all 0.15s ease;
+}
+
+.nav-item:hover {
+    color: var(--blanco);
+    background: rgba(255,255,255,0.05);
+}
+
+.nav-icon { font-size: 18px; width: 22px; text-align: center; }
+
+.nav-item.active {
+    color: var(--naranja);
+    background: rgba(255,122,0,0.1);
+    border-left-color: var(--naranja);
+}
+
+/* --- ÁREA PRINCIPAL --- */
+.main-area {
+    flex: 1;
+    min-width: 0;
 }
 
 /* --- SECCIÓN SUPERIOR OSCURA --- */
 .profile-header {
-    background: radial-gradient(ellipse at 50% 0%, #3D1F00 0%, #1A1008 70%);
-    padding: 25px 20px;
-    border-bottom-left-radius: 28px;
-    border-bottom-right-radius: 28px;
-    color: var(--text-white);
+    background: radial-gradient(ellipse at 50% 0%, #3D1F00 0%, var(--gris-oscuro) 70%);
+    padding: 32px 32px 28px;
+    color: var(--blanco);
 }
 
-.header-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 16px;
-}
-
-.header-top h2 {
+.profile-header h2 {
     font-size: 18px;
     font-weight: 700;
     letter-spacing: -0.01em;
+    margin-bottom: 16px;
 }
-
-.btn-menu {
-    background: none;
-    border: none;
-    color: var(--text-white);
-    font-size: 20px;
-    cursor: pointer;
-    opacity: 0.8;
-}
-.btn-menu:hover { opacity: 1; }
 
 .avatar-section {
     display: flex;
@@ -91,7 +123,7 @@ body {
 .avatar {
     width: 84px;
     height: 84px;
-    background-color: var(--orange);
+    background-color: var(--naranja);
     border-radius: 24px;
     display: flex;
     justify-content: center;
@@ -99,15 +131,15 @@ body {
     font-size: 32px;
     font-weight: 800;
     position: relative;
-    color: #fff;
-    box-shadow: 0 6px 16px rgba(232, 130, 42, 0.35);
+    color: var(--blanco);
+    box-shadow: 0 6px 16px rgba(255,122,0,0.35);
 }
 
 .change-photo {
     position: absolute;
     bottom: -4px;
     right: -4px;
-    background-color: #ffffff;
+    background-color: var(--blanco);
     width: 26px;
     height: 26px;
     border-radius: 50%;
@@ -134,6 +166,9 @@ body {
 /* Barra de Progreso */
 .progress-container {
     margin-top: 10px;
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .progress-text {
@@ -154,22 +189,22 @@ body {
 
 .progress-bar-fill {
     height: 100%;
-    background-color: var(--orange);
+    background-color: var(--naranja);
     border-radius: 10px;
 }
 
 /* --- ACORDEONES --- */
 .profile-content {
-    padding: 20px;
+    padding: 28px 32px 48px;
     display: flex;
     flex-direction: column;
     gap: 14px;
-    overflow-y: auto;
-    flex: 1;
+    max-width: 700px;
+    margin: 0 auto;
 }
 
 .accordion-item {
-    background-color: var(--bg-white);
+    background-color: var(--blanco);
     border-radius: var(--radius-lg);
     box-shadow: 0 4px 12px rgba(0,0,0,0.02);
     overflow: hidden;
@@ -196,21 +231,21 @@ body {
     border-radius: 50%;
 }
 
-.info-icon { background-color: #FFF3E8; color: var(--orange); }
-.job-icon { background-color: #E8F0FE; color: #1A73E8; }
-.skill-icon { background-color: #F3E8FF; color: #9333EA; font-weight: bold; }
-.summary-icon { background-color: #E6F4EA; color: #137333; }
+.info-icon { background-color: var(--durazno); color: var(--naranja); }
+.job-icon { background-color: var(--azul-claro); color: var(--azul); }
+.skill-icon { background-color: rgba(139,92,246,0.15); color: var(--purpura); font-weight: bold; }
+.summary-icon { background-color: rgba(34,197,94,0.15); color: var(--verde); }
 
 .accordion-header h4 {
     font-size: 14px;
-    color: var(--text-dark);
+    color: var(--texto-principal);
     flex-grow: 1;
     font-weight: 700;
 }
 
 .badge-count {
-    background-color: #F3E8FF;
-    color: #9333EA;
+    background-color: rgba(139,92,246,0.15);
+    color: var(--purpura);
     font-size: 11px;
     font-weight: 700;
     padding: 2px 8px;
@@ -219,7 +254,7 @@ body {
 }
 
 .arrow {
-    color: var(--text-muted);
+    color: var(--texto-secundario);
     font-size: 14px;
     font-weight: bold;
 }
@@ -237,7 +272,7 @@ body {
 
 .body-instruction {
     font-size: 11px;
-    color: var(--text-muted);
+    color: var(--texto-secundario);
     margin-bottom: 12px;
 }
 
@@ -245,12 +280,12 @@ body {
 .dummy-input {
     width: 100%;
     padding: 10px 12px;
-    background: var(--input-bg);
+    background: var(--gris-claro);
     border: 1px solid transparent;
     border-radius: var(--radius-md);
     font-size: 13px;
     outline: none;
-    color: var(--text-dark);
+    color: var(--texto-principal);
 }
 
 /* Bloque de Habilidades (Tags) */
@@ -264,8 +299,8 @@ body {
     font-size: 12px;
     padding: 6px 12px;
     border-radius: 20px;
-    background-color: var(--input-bg);
-    color: var(--text-gray);
+    background-color: var(--gris-claro);
+    color: var(--texto-secundario);
     font-weight: 600;
     cursor: pointer;
     transition: all 0.15s;
@@ -273,28 +308,28 @@ body {
 }
 
 .tag.active {
-    background-color: var(--orange);
-    color: #ffffff;
-    box-shadow: 0 3px 8px rgba(232, 130, 42, 0.2);
+    background-color: var(--naranja);
+    color: var(--blanco);
+    box-shadow: 0 3px 8px rgba(255,122,0,0.2);
 }
 
 .tag.btn-more {
     background-color: transparent;
-    border: 1px dashed var(--text-muted);
-    color: var(--text-muted);
+    border: 1px dashed var(--texto-secundario);
+    color: var(--texto-secundario);
 }
 
 /* Bloque de Texto (Resumen Profesional) */
 .textarea-container textarea {
     width: 100%;
     height: 110px;
-    background-color: var(--input-bg);
+    background-color: var(--gris-claro);
     border: none;
     border-radius: var(--radius-md);
     padding: 12px;
     font-size: 13px;
     font-family: var(--font);
-    color: var(--text-dark);
+    color: var(--texto-principal);
     resize: none;
     line-height: 1.5;
     outline: none;
@@ -307,15 +342,15 @@ body {
     font-size: 11px;
 }
 
-.char-count { color: var(--text-muted); }
-.status-ok { color: #137333; font-weight: 600; }
+.char-count { color: var(--texto-secundario); }
+.status-ok { color: var(--verde); font-weight: 600; }
 
 /* Botón naranja de Guardar */
 .btn-save {
     width: 100%;
     padding: 16px;
-    background: linear-gradient(135deg, #F09030 0%, #E8822A 60%, #C96A18 100%);
-    color: #ffffff;
+    background: linear-gradient(135deg, #F09030 0%, var(--naranja) 60%, #C96A18 100%);
+    color: var(--blanco);
     border: none;
     border-radius: var(--radius-lg);
     font-size: 14px;
@@ -323,40 +358,64 @@ body {
     letter-spacing: 0.05em;
     cursor: pointer;
     margin-top: 8px;
-    box-shadow: 0 4px 18px rgba(232, 130, 42, 0.3);
+    box-shadow: 0 4px 18px rgba(255,122,0,0.3);
     transition: transform 0.15s;
 }
 
 .btn-save:hover { transform: translateY(-1px); }
 
-/* --- BARRA DE NAVEGACIÓN INFERIOR FIX ---- */
-.bottom-nav {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 65px;
-    background-color: #ffffff;
-    border-top: 1px solid rgba(0,0,0,0.06);
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
+/* ═══════════════════════════════════════════
+   RESPONSIVE — celular: el sidebar se convierte
+   en el menú inferior fijo, igual que antes
+   ════════════════════════════════════════ */
+@media (max-width: 768px) {
 
-.nav-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-decoration: none;
-    color: var(--text-muted);
-    font-size: 11px;
-    font-weight: 500;
-    gap: 2px;
-}
+    .app-layout {
+        flex-direction: column;
+    }
 
-.nav-icon { font-size: 18px; }
+    .sidebar {
+        width: 100%;
+        flex-direction: row;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        height: 65px;
+        padding: 0;
+        border-top: 1px solid rgba(255,255,255,0.08);
+        z-index: 10;
+    }
 
-.nav-item.active {
-    color: var(--orange);
-    font-weight: 700;
+    .sidebar-brand { display: none; }
+
+    .sidebar-nav {
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .nav-item {
+        flex: 1;
+        flex-direction: column;
+        gap: 2px;
+        padding: 8px 0;
+        font-size: 11px;
+        text-align: center;
+        border-left: none;
+        border-top: 3px solid transparent;
+    }
+
+    .nav-item.active {
+        border-left-color: transparent;
+        border-top-color: var(--naranja);
+    }
+
+    .main-area {
+        padding-bottom: 65px;
+    }
+
+    .profile-header, .profile-content {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 }
