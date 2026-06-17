@@ -7,79 +7,67 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  
-  <!-- CORREGIDO: Ahora usa tu CSS real -->
+ 
+  <link rel="stylesheet" href="../css/style.css" />
   <link rel="stylesheet" href="../css/landing.css" />
 </head>
 <body class="login-body">
-
   <div class="login-container">
-    
+ 
     <div class="login-header">
-      <!-- CORREGIDO: Vuelve a login.html -->
       <a href="login.html" class="link-forgot" style="display: inline-block; margin-bottom: 15px; font-weight: 600;">
         ← Volver al inicio de sesión
       </a>
-
       <div class="header-logo" style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 15px;">
-        <img src="../img/logo.jpg" alt="Emplea IA" class="header-logo-img" style="width: 36px; height: 36px; border-radius: 10px; object-fit: cover;" />
-        <span class="header-brand" style="font-size: 18px; font-weight: 800; color: #fff;">EMPLEA <span class="text-orange">IA</span></span>
+        <img src="../recursos/EMPLEA IA LOGO.jpeg" alt="Emplea IA" class="header-logo-img" style="width: 36px; height: 36px; border-radius: 10px; object-fit: cover;" />
+        <span class="header-brand mensaje-blanco" style="font-size: 18px; font-weight: 800;">EMPLEA <span class="text-orange">IA</span></span>
       </div>
-
       <h2 class="login-title" style="font-size: 22px;">Recuperar Contraseña</h2>
       <p class="login-subtitle">Ingresa tu correo y te enviaremos un enlace para restablecer tu contraseña.</p>
     </div>
-
     <div class="login-form">
-
       <div style="display: flex; justify-content: center; margin-bottom: 5px;">
         <div class="recovery-icon">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#E8822A" stroke-width="1.8">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" style="stroke: var(--naranja);" stroke-width="1.8">
             <rect x="2" y="4" width="20" height="16" rx="3"/>
             <path d="M2 7l10 7 10-7"/>
           </svg>
         </div>
       </div>
-
       <div class="form-group">
         <label class="form-label">CORREO ELECTRÓNICO <span class="text-orange">*</span></label>
         <input type="email" class="form-input" id="emailInput" placeholder="Ingresa tu correo" required />
         <p class="register-text" style="text-align: left; margin-top: 4px; font-size: 11px;">Recibirás un enlace válido por 30 minutos.</p>
       </div>
-
       <button class="btn-primary btn-full style-login-btn" id="sendBtn" onclick="enviarEnlace()">
         Enviar enlace de recuperación
       </button>
-
       <!-- Mensaje de éxito oculto -->
-      <div id="successMsg" class="hidden" style="background: rgba(40, 167, 69, 0.1); border: 1px solid #28a745; color: #28a745; padding: 12px; border-radius: 12px; text-align: center; font-weight: 600; font-size: 14px;">
+      <div id="successMsg" class="hidden mensaje-exito">
         ✓ ¡Enlace enviado! Revisa tu correo.
       </div>
-
       <div class="login-links">
         <p class="register-text">
-          ¿Recuerdas tu contraseña? <!-- CORREGIDO: Redirige a login.html -->
+          ¿Recuerdas tu contraseña?
           <a href="login.html" class="link-register">Ingresar</a>
         </p>
       </div>
-
     </div>
-
   </div>
-
   <script>
     function enviarEnlace() {
-      const email = document.getElementById('emailInput').value;
+      const input = document.getElementById('emailInput');
+      const email = input.value;
       if (!email || !email.includes('@')) {
-        document.getElementById('emailInput').style.borderColor = '#E8822A';
-        document.getElementById('emailInput').focus();
+        input.classList.add('input-error');
+        input.focus();
         return;
       }
+      input.classList.remove('input-error');
       const btn = document.getElementById('sendBtn');
       btn.textContent = 'Enviando...';
       btn.disabled = true;
       btn.style.opacity = '0.7';
-
       setTimeout(() => {
         btn.style.display = 'none';
         document.getElementById('successMsg').classList.remove('hidden');
