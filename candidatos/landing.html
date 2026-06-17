@@ -145,16 +145,22 @@
   </div>
 
   <script>
-    let pct = 38;
-    const bar = document.getElementById('loadingBar');
-    bar.style.width = pct + '%';
-
-    const interval = setInterval(() => {
-      pct += Math.random() * 4;
-      if (pct >= 100) { pct = 100; clearInterval(interval); }
+    // Si llegamos con #landing en la URL (ej. desde "Volver"), nos saltamos el splash
+    if (window.location.hash === '#landing') {
+      document.getElementById('splash').classList.add('hidden');
+      document.getElementById('landing').classList.remove('hidden');
+    } else {
+      let pct = 38;
+      const bar = document.getElementById('loadingBar');
       bar.style.width = pct + '%';
-      document.querySelector('.loading-pct').textContent = Math.floor(pct) + '%';
-    }, 200);
+
+      const interval = setInterval(() => {
+        pct += Math.random() * 4;
+        if (pct >= 100) { pct = 100; clearInterval(interval); }
+        bar.style.width = pct + '%';
+        document.querySelector('.loading-pct').textContent = Math.floor(pct) + '%';
+      }, 200);
+    }
 
     function showLanding() {
       document.getElementById('splash').classList.add('fade-out');

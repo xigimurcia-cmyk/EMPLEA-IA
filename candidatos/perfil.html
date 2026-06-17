@@ -11,133 +11,231 @@
     <link rel="stylesheet" href="../css/perfil.css">
 </head>
 <body>
+
+    <button class="sidebar-toggle" onclick="toggleSidebar()">☰</button>
+    <div class="sidebar-backdrop" id="sidebar-backdrop" onclick="toggleSidebar()"></div>
+
     <div class="app-layout">
 
-        <aside class="sidebar">
-            <div class="sidebar-brand">
-                <img src="../recursos/EMPLEA IA LOGO.jpeg" alt="Emplea IA" class="sidebar-logo">
-                <span class="sidebar-brand-text">EMPLEA <span class="naranja">IA</span></span>
+        <aside class="sidebar" id="sidebar">
+
+            <div class="sidebar-top">
+                <div class="sidebar-brand">
+                    <img src="../recursos/EMPLEA IA LOGO.jpeg" alt="Emplea IA" class="sidebar-logo">
+                    <span class="sidebar-brand-text">EMPLEA <span class="naranja">IA</span></span>
+                </div>
+                <button class="bell-btn" onclick="alert('Notificaciones próximamente.')">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 4 1.5 5.5 1.5 5.5h-15S6 12 6 8z"/><path d="M9.5 17a2.5 2.5 0 0 0 5 0"/></svg>
+                    <span class="bell-dot"></span>
+                </button>
             </div>
+
+            <div class="sidebar-user">
+                <div class="sidebar-avatar-wrap">
+                    <div class="sidebar-avatar" id="sidebar-avatar">U</div>
+                    <span class="status-dot"></span>
+                </div>
+                <div>
+                    <p class="sidebar-user-name" id="sidebar-user-name">Cargando...</p>
+                    <p class="sidebar-user-role">Desarrollo de Software</p>
+                </div>
+            </div>
+
+            <div class="sidebar-progress">
+                <div class="progress-text">
+                    <span>Perfil completado</span>
+                    <span>87%</span>
+                </div>
+                <div class="progress-bar-bg">
+                    <div class="progress-bar-fill" style="width: 87%;"></div>
+                </div>
+            </div>
+
+            <p class="sidebar-section-label">MENÚ PRINCIPAL</p>
 
             <nav class="sidebar-nav">
                 <a href="dashboard.html" class="nav-item">
-                    <span class="nav-icon">🏠</span>
-                    <span class="nav-label">Inicio</span>
+                    <span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></span>
+                    <span class="nav-label">Dashboard</span>
                 </a>
                 <a href="asistente-ia.html" class="nav-item">
-                    <span class="nav-icon">🤖</span>
-                    <span class="nav-label">IA</span>
-                </a>
-                <a href="#" class="nav-item" onclick="alert('Estadísticas próximamente.')">
-                    <span class="nav-icon">📊</span>
-                    <span class="nav-label">Stats</span>
+                    <span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="8" width="14" height="11" rx="2"/><line x1="12" y1="8" x2="12" y2="4"/><circle cx="12" cy="3" r="1"/><circle cx="9" cy="13" r="1.2"/><circle cx="15" cy="13" r="1.2"/><line x1="9" y1="17" x2="15" y2="17"/></svg></span>
+                    <span class="nav-label">Asistente IA</span>
+                    <span class="nav-badge badge-new">NEW</span>
                 </a>
                 <a href="buscar-vacantes.html" class="nav-item">
-                    <span class="nav-icon">📋</span>
-                    <span class="nav-label">Empleos</span>
+                    <span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
+                    <span class="nav-label">Buscar Vacantes</span>
+                </a>
+                <a href="postulaciones.html" class="nav-item">
+                    <span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="13" y2="17"/></svg></span>
+                    <span class="nav-label">Mis Postulaciones</span>
+                    <span class="nav-badge badge-count">12</span>
                 </a>
                 <a href="perfil.html" class="nav-item active">
-                    <span class="nav-icon">👤</span>
+                    <span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.5-7 8-7s8 3 8 7"/></svg></span>
                     <span class="nav-label">Perfil</span>
                 </a>
+                <a href="notificaciones.html" class="nav-item">
+                    <span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 4 1.5 5.5 1.5 5.5h-15S6 12 6 8z"/><path d="M9.5 17a2.5 2.5 0 0 0 5 0"/></svg></span>
+                    <span class="nav-label">Notificaciones</span>
+                    <span class="nav-badge badge-blue">3</span>
+                </a>
+                <a href="configuracion.html" class="nav-item">
+                    <span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.2 4.2l2.8 2.8M17 17l2.8 2.8M1 12h4M19 12h4M4.2 19.8L7 17M17 7l2.8-2.8"/></svg></span>
+                    <span class="nav-label">Configuración</span>
+                </a>
             </nav>
+
+            <a href="login.html" class="nav-item nav-logout">
+                <span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg></span>
+                <span class="nav-label">Cerrar Sesión</span>
+            </a>
         </aside>
 
         <div class="main-area">
 
-            <header class="profile-header">
-                <h2>Mi Perfil</h2>
-
-                <div class="avatar-section">
+            <header class="profile-hero">
+                <div class="hero-left">
                     <div class="avatar" id="user-avatar">
                         U
                         <label class="change-photo">📷</label>
                     </div>
-                    <h3 id="user-name">Cargando...</h3>
-                    <p class="profession">Desarrollo de Software</p>
-                </div>
-
-                <div class="progress-container">
-                    <div class="progress-text">
-                        <span>Perfil completado</span>
-                        <span>87%</span>
-                    </div>
-                    <div class="progress-bar-bg">
-                        <div class="progress-bar-fill" style="width: 87%;"></div>
-                    </div>
-                </div>
-            </header>
-
-            <main class="profile-content">
-
-                <div class="accordion-item">
-                    <div class="accordion-header" onclick="toggleAccordion(this)">
-                        <span class="icon info-icon">👤</span>
-                        <h4>Información Personal</h4>
-                        <span class="arrow">⌄</span>
-                    </div>
-                    <div class="accordion-body">
-                        <p class="body-instruction">Gestiona tus datos de contacto básicos.</p>
-                        <div style="display: flex; flex-direction: column; gap: 10px;">
-                            <input type="text" class="dummy-input" placeholder="Teléfono Alternativo" />
-                            <input type="text" class="dummy-input" placeholder="Ciudad, País" value="Chihuahua, México" />
-                        </div>
-                    </div>
-                </div>
-
-                <div class="accordion-item">
-                    <div class="accordion-header" onclick="toggleAccordion(this)">
-                        <span class="icon job-icon">💼</span>
-                        <h4>Perfil Profesional</h4>
-                        <span class="arrow">⌄</span>
-                    </div>
-                    <div class="accordion-body">
-                        <p class="body-instruction">Define tus preferencias laborales actuales.</p>
-                        <input type="text" class="dummy-input" placeholder="Puesto deseado" value="Desarrollador Junior Frontend" />
-                    </div>
-                </div>
-
-                <div class="accordion-item open">
-                    <div class="accordion-header" onclick="toggleAccordion(this)">
-                        <span class="icon skill-icon">&lt;/&gt;</span>
-                        <h4>Habilidades</h4>
-                        <div class="badge-count">6</div>
-                        <span class="arrow">⌃</span>
-                    </div>
-                    <div class="accordion-body">
-                        <p class="body-instruction">Toca para agregar o quitar habilidades</p>
-                        <div class="tags-container">
-                            <span class="tag active" onclick="toggleTag(this)">✓ HTML</span>
-                            <span class="tag active" onclick="toggleTag(this)">✓ CSS</span>
-                            <span class="tag active" onclick="toggleTag(this)">✓ JavaScript</span>
-                            <span class="tag" onclick="toggleTag(this)">TypeScript</span>
-                            <span class="tag active" onclick="toggleTag(this)">✓ Python</span>
-                            <span class="tag active" onclick="toggleTag(this)">✓ MySQL</span>
-                            <span class="tag active" onclick="toggleTag(this)">✓ React</span>
-                            <span class="tag" onclick="toggleTag(this)">Node.js</span>
-                            <span class="tag btn-more" onclick="alert('Funcionalidad para añadir habilidades personalizadas.')">+ Ver más</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="accordion-item open">
-                    <div class="accordion-header" onclick="toggleAccordion(this)">
-                        <span class="icon summary-icon">📄</span>
-                        <h4>Resumen Profesional</h4>
-                        <span class="arrow">⌃</span>
-                    </div>
-                    <div class="accordion-body">
-                        <div class="textarea-container">
-                            <textarea id="summary-text" maxlength="500" oninput="updateCharCount()">Desarrolladora de software con 3 años de experiencia en tecnologías web. Especializada en React y desarrollo frontend, con conocimientos en backend con Node.js y bases de datos MySQL.</textarea>
-                            <div class="textarea-footer">
-                                <span class="char-count" id="char-counter">251/500 caracteres</span>
-                                <span class="status-ok">✓ Buen resumen</span>
+                    <div>
+                        <h2 id="user-name">Cargando...</h2>
+                        <p class="profession">Desarrollo de Software · Ciudad Juárez</p>
+                        <div class="progress-container">
+                            <div class="progress-text">
+                                <span>Perfil completado</span>
+                                <span>87%</span>
+                            </div>
+                            <div class="progress-bar-bg">
+                                <div class="progress-bar-fill" style="width: 87%;"></div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <button class="btn-save" onclick="alert('¡Cambios de perfil guardados correctamente!')">GUARDAR CAMBIOS</button>
+                <div class="hero-stats">
+                    <div class="stat-box">
+                        <span class="stat-num">12</span>
+                        <span class="stat-label">Postulaciones</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-num naranja">87%</span>
+                        <span class="stat-label">IA Match</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-num">23</span>
+                        <span class="stat-label">Visitas</span>
+                    </div>
+                </div>
+            </header>
+
+            <main class="profile-grid">
+
+                <div class="grid-col">
+
+                    <div class="accordion-item open">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <span class="icon info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.5-7 8-7s8 3 8 7"/></svg></span>
+                            <h4>Información Personal</h4>
+                            <span class="arrow">⌄</span>
+                        </div>
+                        <div class="accordion-body">
+                            <div class="form-field">
+                                <label>NOMBRE COMPLETO</label>
+                                <input type="text" class="dummy-input" id="input-nombre" value="" />
+                            </div>
+                            <div class="form-field">
+                                <label>CORREO ELECTRÓNICO</label>
+                                <input type="email" class="dummy-input" value="itzel.silva@email.com" />
+                            </div>
+                            <div class="form-field">
+                                <label>TELÉFONO</label>
+                                <input type="tel" class="dummy-input" value="+52 656 000 0000" />
+                            </div>
+                            <div class="form-field">
+                                <label>CIUDAD</label>
+                                <input type="text" class="dummy-input" value="Ciudad Juárez, Chihuahua" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <span class="icon job-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></span>
+                            <h4>Perfil Profesional</h4>
+                            <span class="arrow">⌄</span>
+                        </div>
+                        <div class="accordion-body">
+                            <div class="form-field">
+                                <label>CARRERA</label>
+                                <input type="text" class="dummy-input" value="Desarrollo de Software" />
+                            </div>
+                            <div class="form-field">
+                                <label>NIVEL DE ESTUDIOS</label>
+                                <input type="text" class="dummy-input" value="Licenciatura" />
+                            </div>
+                            <div class="form-field">
+                                <label>AÑOS DE EXPERIENCIA</label>
+                                <input type="text" class="dummy-input" value="1-3 años" />
+                            </div>
+                            <div class="form-field">
+                                <label>TIPO DE EMPLEO</label>
+                                <input type="text" class="dummy-input" value="Tiempo completo" />
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="grid-col">
+
+                    <div class="accordion-item open">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <span class="icon skill-icon">&lt;/&gt;</span>
+                            <h4>Habilidades</h4>
+                            <div class="badge-count-pill">6</div>
+                            <span class="arrow">⌃</span>
+                        </div>
+                        <div class="accordion-body">
+                            <p class="body-instruction">Toca para agregar o quitar habilidades</p>
+                            <div class="tags-container">
+                                <span class="tag active" onclick="toggleTag(this)">✓ HTML</span>
+                                <span class="tag active" onclick="toggleTag(this)">✓ CSS</span>
+                                <span class="tag active" onclick="toggleTag(this)">✓ JavaScript</span>
+                                <span class="tag" onclick="toggleTag(this)">TypeScript</span>
+                                <span class="tag active" onclick="toggleTag(this)">✓ Python</span>
+                                <span class="tag active" onclick="toggleTag(this)">✓ MySQL</span>
+                                <span class="tag active" onclick="toggleTag(this)">✓ React</span>
+                                <span class="tag" onclick="toggleTag(this)">Node.js</span>
+                                <span class="tag btn-more" onclick="alert('Funcionalidad para añadir habilidades personalizadas.')">+ Ver más</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            <span class="icon summary-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg></span>
+                            <h4>Resumen Profesional</h4>
+                            <span class="arrow">⌄</span>
+                        </div>
+                        <div class="accordion-body">
+                            <div class="textarea-container">
+                                <textarea id="summary-text" maxlength="500" oninput="updateCharCount()">Desarrolladora de software con 3 años de experiencia en tecnologías web. Especializada en React y desarrollo frontend, con conocimientos en backend con Node.js y bases de datos MySQL.</textarea>
+                                <div class="textarea-footer">
+                                    <span class="char-count" id="char-counter">183/500 caracteres</span>
+                                    <span class="status-ok">✓ Buen resumen</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn-save" onclick="alert('¡Cambios de perfil guardados correctamente!')">GUARDAR CAMBIOS</button>
+
+                </div>
+
             </main>
 
         </div>
@@ -145,48 +243,40 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            // Recupera el nombre guardado en LocalStorage
             const nombreGuardado = localStorage.getItem("usuarioNombre") || "Itzel Modesto";
             document.getElementById("user-name").textContent = nombreGuardado;
+            document.getElementById("sidebar-user-name").textContent = nombreGuardado;
+            document.getElementById("input-nombre").value = nombreGuardado;
 
-            // Extrae la primera letra para colocarla automáticamente en el avatar
             const primeraLetra = nombreGuardado.trim().charAt(0).toUpperCase();
             document.getElementById("user-avatar").innerHTML = `${primeraLetra} <label class="change-photo">📷</label>`;
+            document.getElementById("sidebar-avatar").textContent = primeraLetra;
 
-            // Inicializa el contador de caracteres del cuadro de texto
             updateCharCount();
         });
 
-        // Alterna el estado abierto/cerrado de los acordeones
+        function toggleSidebar() {
+            document.getElementById("sidebar").classList.toggle("open");
+            document.getElementById("sidebar-backdrop").classList.toggle("show");
+        }
+
         function toggleAccordion(header) {
             const item = header.parentElement;
             const arrow = header.querySelector(".arrow");
-
             item.classList.toggle("open");
-
-            if (item.classList.contains("open")) {
-                arrow.textContent = "⌃";
-            } else {
-                arrow.textContent = "⌄";
-            }
+            arrow.textContent = item.classList.contains("open") ? "⌃" : "⌄";
         }
 
-        // Selecciona y deselecciona habilidades interactivamente
         function toggleTag(tagElement) {
             tagElement.classList.toggle("active");
             let texto = tagElement.textContent;
             if (tagElement.classList.contains("active")) {
-                if (!texto.startsWith("✓ ")) {
-                    tagElement.textContent = "✓ " + texto;
-                }
+                if (!texto.startsWith("✓ ")) tagElement.textContent = "✓ " + texto;
             } else {
-                if (texto.startsWith("✓ ")) {
-                    tagElement.textContent = texto.replace("✓ ", "");
-                }
+                if (texto.startsWith("✓ ")) tagElement.textContent = texto.replace("✓ ", "");
             }
         }
 
-        // Actualiza el contador numérico de caracteres en tiempo real
         function updateCharCount() {
             const textarea = document.getElementById("summary-text");
             const counter = document.getElementById("char-counter");

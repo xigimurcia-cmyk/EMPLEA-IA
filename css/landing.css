@@ -396,17 +396,6 @@ a { text-decoration: none; color: inherit; }
 .legal-links a { color: var(--texto-secundario); }
 .legal-links a:hover { color: var(--naranja); }
 
-/* ═══════════════════════════════════════════
-   RESPONSIVE
-   ════════════════════════════════════════ */
-@media (min-width: 480px) {
-  .splash, .hero-body, .cta-section { padding-left: 32px; padding-right: 32px; }
-  .hero-title { font-size: 42px; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { animation: none !important; transition: none !important; }
-}
 /* ==========================================
    🎨 ESTILOS EXCLUSIVOS PARA LA PANTALLA DE LOGIN
    ========================================== */
@@ -549,23 +538,52 @@ a { text-decoration: none; color: inherit; }
 }
 
 .btn-outline {
-  background-color: var(--gris-oscuro);
-  color: var(--blanco);
-  border: 2px solid var(--gris-oscuro);
-  padding: 16px 24px;
-  border-radius: var(--radius-lg);
-  font-weight: 700;
-  display: block;
-  text-align: center;
-  text-decoration: none;
-  box-sizing: border-box;
-  transition: all 0.2s ease;
-  margin-top: 5px;
-  box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
+    background-color: var(--blanco);
+    color: var(--gris-oscuro);
+    border: 2px solid #e5e5e5;
+    padding: 16px 24px;
+    border-radius: var(--radius-lg);
+    font-weight: 700;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+    margin-top: 5px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
+}
+.btn-outline:hover {
+    background-color: #f5f5f5;
+    border-color: #d9d9d9;
+    transform: translateY(-1px);
 }
 
-.btn-outline:hover {
-  background-color: var(--gris-medio);
-  border-color: var(--gris-medio);
-  transform: translateY(-1px);
+/* ═══════════════════════════════════════════
+   RESPONSIVE
+   ════════════════════════════════════════ */
+@media (min-width: 480px) {
+  .splash, .hero-body, .cta-section { padding-left: 32px; padding-right: 32px; }
+  .hero-title { font-size: 42px; }
+}
+
+/* tarjeta de login/recuperar más grande en pantallas grandes — VA AL FINAL para que sí gane */
+@media (min-width: 768px) {
+  .login-container {
+    max-width: 440px;
+    padding: 40px 36px;
+  }
+  .login-logo { width: 84px; height: 84px; }
+  .login-title { font-size: 28px; }
+  .form-input { padding: 16px 18px; font-size: 15px; }
+}
+
+@media (min-width: 1024px) {
+  .login-container {
+    max-width: 480px;
+    padding: 48px 40px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
 }
