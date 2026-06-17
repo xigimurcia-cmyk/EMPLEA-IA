@@ -7,40 +7,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/landing.css">
-
-  <style>
-    /* 🛠️ CONFIGURACIÓN PARA QUE EL BOTÓN RESALTE AL MÁXIMO */
-    .btn-outline {
-      background-color: #1A1008 !important; /* Fondo oscuro sólido (combina con la marca) */
-      color: #FFFFFF !important;            /* Letras blancas hiper legibles */
-      border: 2px solid #1A1008 !important; /* Borde oscuro para dar definición */
-      padding: 16px 24px !important;        /* Buen tamaño de botón */
-      border-radius: 16px !important;       /* Bordes redondeados idénticos al naranja */
-      font-weight: 700 !important;          /* Letras gruesas en negrita */
-      display: block !important;            /* Ocupa su propio bloque */
-      text-align: center !important;
-      text-decoration: none !important;
-      box-sizing: border-box !important;
-      transition: all 0.2s ease !important;
-      margin-top: 5px !important;           /* Separación perfecta del botón de arriba */
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); /* Sombra elegante */
-    }
-
-    /* Efecto interactivo al pasar el mouse o pulsar con el dedo */
-    .btn-outline:hover {
-      background-color: #231508 !important; /* Se aclara un poquito el fondo oscuro */
-      border-color: #231508 !important;
-      transform: translateY(-1px);
-    }
-
-    /* Forzar que los dos botones compartan la misma estructura exacta */
-    .btn-full {
-      display: block !important;
-      width: 100% !important;
-      box-sizing: border-box !important;
-    }
-  </style>
 </head>
 <body>
 
@@ -59,7 +27,7 @@
 
     <div class="splash-content">
       <div class="splash-logo">
-        <img src="../img/logo.jpg" alt="Emplea IA" class="splash-logo-img" />
+        <img src="../recursos/EMPLEA IA LOGO.jpeg" alt="Emplea IA" class="splash-logo-img" />
       </div>
 
       <p class="splash-tagline">POWERED BY ARTIFICIAL INTELLIGENCE</p>
@@ -108,7 +76,7 @@
     <section class="hero">
       <header class="hero-header">
         <div class="header-logo">
-          <img src="../img/logo.jpg" alt="Emplea IA" class="header-logo-img" />
+          <img src="../recursos/EMPLEA IA LOGO.jpeg" alt="Emplea IA" class="header-logo-img" />
           <span class="header-brand">EMPLEA <span class="orange">IA</span></span>
         </div>
       </header>
@@ -147,13 +115,12 @@
       </div>
     </section>
 
-    <!-- SECCIÓN DE BOTONES CORREGIDA -->
+    <!-- SECCIÓN DE BOTONES -->
     <section class="cta-section" style="display: flex; flex-direction: column; gap: 12px;">
       <a href="registro.html" class="btn-primary btn-full">Crear Cuenta Gratis</a>
-      
-      <!-- NUEVO ENLACE CON MÁS VISIBILIDAD -->
+
       <a href="login.html" class="btn-outline btn-full">Ya tengo cuenta — Ingresar</a>
-      
+
       <a href="recuperar-contraseña.html" class="link-orange" style="margin-top: 8px;">¿Olvidaste tu contraseña?</a>
       <a href="#empresa" class="link-gray">¿Eres empresa?</a>
 
