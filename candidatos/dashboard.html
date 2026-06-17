@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMPLEA IA - Dashboard Empresa</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dashboard-empresas.css">
+</head>
+<body>
+
+    <div class="layout-container">
+        <aside class="sidebar">
+            <div class="brand">
+                <span class="logo-orange">EMPLEA</span> <span class="logo-white">IA</span>
+            </div>
+            
+            <div class="user-profile">
+                <div class="avatar-emp">TS</div>
+                <div class="user-info">
+                    <h3>Tech Solutions</h3>
+                    <p>Módulo Empresa</p>
+                </div>
+            </div>
+
+            <nav class="menu">
+                <p class="menu-label">PANEL EMPRESARIAL</p>
+                <a href="dashboard-empresas.html" class="menu-item active">Inicio / Dashboard</a>
+                <a href="vacantes-empresas.html" class="menu-item">Gestionar Vacantes <span class="counter">4</span></a>
+                <a href="crear-vacante.html" class="menu-item">Publicar Vacante</a>
+                <a href="candidatos-interes.html" class="menu-item">Talento Guardado</a>
+                <a href="configuracion-empresa.html" class="menu-item">Configuración Empresa</a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <a href="../landing.html" class="logout-btn">Cerrar Sesión empresarial</a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-header">
+                <div class="page-title">
+                    <p class="sub">EMPRESA PANEL</p>
+                    <h2>Bienvenido, Reclutador</h2>
+                </div>
+                <div class="header-actions">
+                    <span class="company-tag">Tech Solutions Inc.</span>
+                    <div class="user-top-avatar"></div>
+                </div>
+            </header>
+
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-val">4</div>
+                    <div class="metric-lbl">Vacantes Activas</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-val">48</div>
+                    <div class="metric-lbl">Postulantes Totales</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-val">6</div>
+                    <div class="metric-lbl">Entrevistas esta semana</div>
+                </div>
+            </div>
+
+            <div class="section-block">
+                <div class="block-header">
+                    <h3>Candidatos Ideales Sugeridos por IA</h3>
+                    <span class="ia-sparkle">✨ Optimizado con Gemini IA</span>
+                </div>
+
+                <div class="talento-list">
+                    <div class="talento-item">
+                        <div class="talento-main">
+                            <div class="talento-avatar">CC</div>
+                            <div class="talento-info">
+                                <h4>Carlos Contreras</h4>
+                                <p>Ingeniero de Software | React, Node.js, Git</p>
+                            </div>
+                        </div>
+                        <div class="talento-match">
+                            <span class="match-pct">94% match</span>
+                            <p class="match-vac">para Vacante: Frontend Dev</p>
+                        </div>
+                        <div class="talento-actions">
+                            <a href="ver-perfil-candidato.html?id=1" class="btn-secondary">Ver Perfil</a>
+                        </div>
+                    </div>
+
+                    <div class="talento-item">
+                        <div class="talento-main">
+                            <div class="talento-avatar">AM</div>
+                            <div class="talento-info">
+                                <h4>Ana Martínez</h4>
+                                <p>UI/UX Designer | Figma, Adobe XD, Prototipado</p>
+                            </div>
+                        </div>
+                        <div class="talento-match">
+                            <span class="match-pct">89% match</span>
+                            <p class="match-vac">para Vacante: Diseñador UI</p>
+                        </div>
+                        <div class="talento-actions">
+                            <a href="ver-perfil-candidato.html?id=2" class="btn-secondary">Ver Perfil</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

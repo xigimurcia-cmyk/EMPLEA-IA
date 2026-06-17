@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMPLEA IA - Perfil de Candidato</title>
+    <!-- 1. Variables globales de colores (Obligatorio) -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- 2. CSS propio de la pantalla -->
+    <link rel="stylesheet" href="../css/perfil-candidato.css">
+</head>
+<body>
+
+    <div class="layout-container">
+        <!-- BARRA LATERAL (SIDEBAR EMPRESA) -->
+        <aside class="sidebar">
+            <div class="brand">
+                <span class="logo-orange">EMPLEA</span> <span class="logo-white">IA</span>
+            </div>
+            
+            <div class="user-profile">
+                <div class="avatar-emp">TS</div>
+                <div class="user-info">
+                    <h3>Tech Solutions</h3>
+                    <p>Módulo Empresa</p>
+                </div>
+            </div>
+
+            <nav class="menu">
+                <p class="menu-label">PANEL EMPRESARIAL</p>
+                <a href="dashboard-empresas.html" class="menu-item">Inicio / Dashboard</a>
+                <a href="vacantes-empresas.html" class="menu-item">Gestionar Vacantes <span class="counter">4</span></a>
+                <a href="candidatos-empresas.html" class="menu-item active">Ver Candidatos</a>
+                <a href="configuracion-empresas.html" class="menu-item">Configuración</a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <a href="../candidatos/landing.html" class="logout-btn">Cerrar Sesión</a>
+            </div>
+        </aside>
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <main class="main-content">
+            <!-- Botón para regresar -->
+            <div class="back-navigation">
+                <a href="dashboard-empresas.html" class="back-link">← Volver al Dashboard</a>
+            </div>
+
+            <!-- TARJETA PRINCIPAL DEL CANDIDATO -->
+            <div class="profile-card">
+                <div class="profile-header">
+                    <div class="profile-avatar-large">XM</div>
+                    <div class="profile-title-area">
+                        <h2>Xitlaly Murcia</h2>
+                        <p class="profession">Desarrollo de Software / Fullstack Developer</p>
+                        <p class="location">📍 Ciudad Juárez, Chihuahua</p>
+                    </div>
+                    <!-- Badge de Match IA -->
+                    <div class="match-badge-box">
+                        <span class="match-percentage">87%</span>
+                        <span class="match-label">IA Match</span>
+                    </div>
+                </div>
+
+                <hr class="divider">
+
+                <!-- CONTENIDO DETALLADO -->
+                <div class="profile-grid">
+                    <!-- Columna Izquierda: Información y Experiencia -->
+                    <div class="profile-main-info">
+                        <div class="info-section">
+                            <h3>Sobre el candidato</h3>
+                            <p>Ingeniera en Software apasionada por el desarrollo web y la arquitectura de sistemas. Experiencia construyendo aplicaciones robustas con stacks modernos y metodologías ágiles.</p>
+                        </div>
+
+                        <div class="info-section">
+                            <h3>Experiencia Laboral</h3>
+                            <div class="experience-item">
+                                <h4>Fullstack Developer Junior — Tech Solutions</h4>
+                                <p class="time-period">Enero 2025 - Presente</p>
+                                <p>Desarrollo y mantenimiento de interfaces web utilizando React y maquetación semántica. Integración de bases de datos relacionales y optimización de consultas.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Columna Derecha: Habilidades y Estado -->
+                    <div class="profile-sidebar-info">
+                        <div class="info-section">
+                            <h3>Habilidades Detectadas</h3>
+                            <div class="tags-container">
+                                <span class="skill-tag green">React</span>
+                                <span class="skill-tag green">JavaScript</span>
+                                <span class="skill-tag green">HTML</span>
+                                <span class="skill-tag green">CSS</span>
+                                <span class="skill-tag green">Python</span>
+                                <span class="skill-tag green">MySQL</span>
+                                <span class="skill-tag green">Git</span>
+                            </div>
+                        </div>
+
+                        <div class="info-section">
+                            <h3>Acciones de Reclutamiento</h3>
+                            <div class="action-buttons">
+                                <button class="btn-action-primary">Agendar Entrevista</button>
+                                <button class="btn-action-secondary">Guardar en Favoritos</button>
+                                <button class="btn-action-danger">Descartar Candidato</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
