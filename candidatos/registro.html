@@ -106,6 +106,38 @@
     </p>
 
   </form>
+    <p class="login-link">
+      ¿Ya tienes cuenta? <a href="login.html" class="link-orange">Ingresar</a>
+    </p>
+
+  </form>
+
+<script>
+const toggles = document.querySelectorAll('.toggle-pw');
+
+if (toggles.length > 0) {
+
+    toggles.forEach(toggle => {
+
+        toggle.addEventListener('click', () => {
+
+            const input = toggle.previousElementSibling;
+
+            if (input.type === 'password') {
+                input.type = 'text';
+                toggle.classList.add('active');
+            } else {
+                input.type = 'password';
+                toggle.classList.remove('active');
+            }
+
+        });
+
+    });
+
+}
+</script>
+
 
 </body>
 </html>

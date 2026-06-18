@@ -587,3 +587,42 @@ a { text-decoration: none; color: inherit; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+.input-wrapper{
+  position: relative;
+}
+
+.input-wrapper{
+  position: relative;
+}
+
+.input-wrapper .form-input{
+  width: 100%;
+  padding-right: 55px;
+}
+
+.input-wrapper{
+  position: relative;
+}
+
+.input-wrapper .form-input{
+  width: 100%;
+  padding-right: 55px;
+}
+
+.toggle-pw{
+  position:absolute;
+  right:16px;
+  top:50%;
+  transform:translateY(-50%);
+  background:none;
+  border:none;
+  color:#8a8a8a;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.toggle-pw:hover{
+  color:#ff7a00;
+}
