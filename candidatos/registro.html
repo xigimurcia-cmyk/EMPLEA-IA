@@ -29,7 +29,7 @@
 
   <form class="reg-body" id="registrationForm" onsubmit="handleRegister(event)">
 
-    <button type="button" class="btn-google" onclick="alert('Google Sign-In simulado')">
+    <button type="button" class="btn-google">
       <svg width="20" height="20" viewBox="0 0 48 48">
         <path fill="#EA4335" d="M24 9.5c3.1 0 5.8 1.1 8 2.9l6-6C34.5 3.1 29.5 1 24 1 14.8 1 7 6.7 3.7 14.6l7 5.4C12.4 13.6 17.7 9.5 24 9.5z"/>
         <path fill="#4285F4" d="M46.5 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h12.7c-.6 3-2.3 5.5-4.8 7.2l7.4 5.7c4.3-4 6.8-9.9 6.8-16.9z"/>
@@ -70,7 +70,7 @@
       <label class="field-label">CONTRASEÑA <span class="required">*</span></label>
       <div class="input-wrapper">
         <input type="password" class="field-input" id="password" placeholder="Mínimo 8 caracteres" required />
-        <button type="button" class="toggle-pw" onclick="togglePassword('password', this)">
+        <button type="button" class="toggle-pw">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
             <circle cx="12" cy="12" r="3"/>
@@ -83,7 +83,7 @@
       <label class="field-label">CONFIRMAR CONTRASEÑA <span class="required">*</span></label>
       <div class="input-wrapper">
         <input type="password" class="field-input" id="confirm" placeholder="Repite tu contraseña" required />
-        <button type="button" class="toggle-pw" onclick="togglePassword('confirm', this)">
+        <button type="button" class="toggle-pw">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
             <circle cx="12" cy="12" r="3"/>
@@ -108,30 +108,33 @@
   </form>
 
   <script>
-    // Función para mostrar/ocultar contraseñas
-    function togglePassword(id, btn) {
-      const input = document.getElementById(id);
-      input.type = input.type === 'password' ? 'text' : 'password';
-      btn.style.opacity = input.type === 'text' ? '1' : '0.5';
-    }
+    // Toggle mostrar/ocultar contraseña
+    const toggles = document.querySelectorAll('.toggle-pw');
+    toggles.forEach(toggle => {
+      toggle.addEventListener('click', () => {
+        const input = toggle.previousElementSibling;
+        if (input.type === 'password') {
+          input.type = 'text';
+          toggle.classList.add('active');
+        } else {
+          input.type = 'password';
+          toggle.classList.remove('active');
+        }
+      });
+    });
 
-    // Controla el registro de datos y avanza de pantalla
+    // Registro y redirección al dashboard
     function handleRegister(event) {
-      event.preventDefault(); // Evita que la página se recargue bruscamente
+      event.preventDefault();
 
-      // Captura los valores de los inputs en tiempo real
       const name = document.getElementById('reg-name').value.trim();
       const lastname = document.getElementById('reg-lastname').value.trim();
+      const fullName = `${name} ${lastname}`.trim() || "Usuario";
 
-      // Valida que los campos no contengan solo espacios en blanco
-      const fullName = `${name} ${lastname}`.trim() || "Itzel Silva";
-
-      // Almacenamos el nombre completo de forma local
       localStorage.setItem("usuarioNombre", fullName);
-
-      // Redirección inmediata al dashboard dentro de candidatos/
       window.location.href = "dashboard.html";
     }
   </script>
+
 </body>
 </html>

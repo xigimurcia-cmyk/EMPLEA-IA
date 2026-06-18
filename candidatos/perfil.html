@@ -1,189 +1,183 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EMPLEA IA - Mi Perfil</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="../css/perfil.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EMPLEA IA - Perfil</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/perfil.css">
+ 
+
 </head>
 <body>
-    <div class="mobile-container">
-        <header class="profile-header">
-            <div class="header-top">
-                <button class="btn-menu">☰</button>
-                <h2>Mi Perfil</h2>
-                <div class="mini-logo"></div>
-            </div>
-            
-            <div class="avatar-section">
-                <div class="avatar" id="user-avatar">
-                    U
-                    <label class="change-photo">📷</label>
-                </div>
-                <h3 id="user-name">Cargando...</h3>
-                <p class="profession">Desarrollo de Software</p>
-            </div>
 
-            <div class="progress-container">
-                <div class="progress-text">
-                    <span>Perfil completado</span>
-                    <span>87%</span>
-                </div>
-                <div class="progress-bar-bg">
-                    <div class="progress-bar-fill" style="width: 87%;"></div>
-                </div>
-            </div>
-        </header>
+<aside class="sidebar">
+  <div class="brand">
+    <div class="logo">
+    <img src="../recursos/EMPLEA IA LOGO.jpeg" alt="EMPLEA IA">
+</div>
+    <h1>EMPLEA <span>IA</span></h1>
+    <div class="bell">⌂</div>
+  </div>
 
-        <main class="profile-content">
-            
-            <div class="accordion-item">
-                <div class="accordion-header" onclick="toggleAccordion(this)">
-                    <span class="icon info-icon">👤</span>
-                    <h4>Información Personal</h4>
-                    <span class="arrow">⌄</span>
-                </div>
-                <div class="accordion-body">
-                    <p class="body-instruction">Gestiona tus datos de contacto básicos.</p>
-                    <div style="display: flex; flex-direction: column; gap: 10px;">
-                        <input type="text" class="dummy-input" placeholder="Teléfono Alternativo" />
-                        <input type="text" class="dummy-input" placeholder="Ciudad, País" value="Chihuahua, México" />
-                    </div>
-                </div>
-            </div>
+  <div class="user-card">
+    <div class="avatar-sm">U</div>
+    <div>
+      <h3>Usuario</h3>
+      <p>Desarrollo de Software</p>
+    </div>
+  </div>
 
-            <div class="accordion-item">
-                <div class="accordion-header" onclick="toggleAccordion(this)">
-                    <span class="icon job-icon">💼</span>
-                    <h4>Perfil Profesional</h4>
-                    <span class="arrow">⌄</span>
-                </div>
-                <div class="accordion-body">
-                    <p class="body-instruction">Define tus preferencias laborales actuales.</p>
-                    <input type="text" class="dummy-input" placeholder="Puesto deseado" value="Desarrollador Junior Frontend" />
-                </div>
-            </div>
+  <div class="progress-box">
+    <div class="progress-text">
+      <span>Perfil completado</span>
+      <b>87%</b>
+    </div>
+    <div class="progress"><span></span></div>
+  </div>
 
-            <div class="accordion-item open">
-                <div class="accordion-header" onclick="toggleAccordion(this)">
-                    <span class="icon skill-icon">&lt;/&gt;</span>
-                    <h4>Habilidades</h4>
-                    <div class="badge-count">6</div>
-                    <span class="arrow">⌃</span>
-                </div>
-                <div class="accordion-body">
-                    <p class="body-instruction">Toca para agregar o quitar habilidades</p>
-                    <div class="tags-container">
-                        <span class="tag active" onclick="toggleTag(this)">✓ HTML</span>
-                        <span class="tag active" onclick="toggleTag(this)">✓ CSS</span>
-                        <span class="tag active" onclick="toggleTag(this)">✓ JavaScript</span>
-                        <span class="tag" onclick="toggleTag(this)">TypeScript</span>
-                        <span class="tag active" onclick="toggleTag(this)">✓ Python</span>
-                        <span class="tag active" onclick="toggleTag(this)">✓ MySQL</span>
-                        <span class="tag active" onclick="toggleTag(this)">✓ React</span>
-                        <span class="tag" onclick="toggleTag(this)">Node.js</span>
-                        <span class="tag btn-more" onclick="alert('Funcionalidad para añadir habilidades personalizadas.')">+ Ver más</span>
-                    </div>
-                </div>
-            </div>
+  <p class="menu-title">MENÚ PRINCIPAL</p>
 
-            <div class="accordion-item open">
-                <div class="accordion-header" onclick="toggleAccordion(this)">
-                    <span class="icon summary-icon">📄</span>
-                    <h4>Resumen Profesional</h4>
-                    <span class="arrow">⌃</span>
-                </div>
-                <div class="accordion-body">
-                    <div class="textarea-container">
-                        <textarea id="summary-text" maxlength="500" oninput="updateCharCount()">Desarrolladora de software con 3 años de experiencia en tecnologías web. Especializada en React y desarrollo frontend, con conocimientos en backend con Node.js y bases de datos MySQL.</textarea>
-                        <div class="textarea-footer">
-                            <span class="char-count" id="char-counter">251/500 caracteres</span>
-                            <span class="status-ok">✓ Buen resumen</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+ <nav class="menu">
+  <a href="dashboard.html">
+    <span class="menu-icon">⌂</span>
+    Inicio
+  </a>
 
-            <button class="btn-save" onclick="alert('¡Cambios de perfil guardados correctamente!')">GUARDAR CAMBIOS</button>
-        </main>
+  <a href="asistente-ia.html">
+    <span class="menu-icon">✦</span>
+    Asistente IA
+    <small>NEW</small>
+  </a>
 
-        <nav class="bottom-nav">
-            <a href="dashboard.html" class="nav-item">
-                <span class="nav-icon">🏠</span>
-                <span>Inicio</span>
-            </a>
-            <a href="asistente-ia.html" class="nav-item">
-                <span class="nav-icon">🤖</span>
-                <span>IA</span>
-            </a>
-            <a href="#" class="nav-item" onclick="alert('Estadísticas próximamente.')">
-                <span class="nav-icon">📊</span>
-                <span>Stats</span>
-            </a>
-            <a href="buscar-vacantes.html" class="nav-item">
-                <span class="nav-icon">📋</span>
-                <span>Empleos</span>
-            </a>
-            <a href="perfil.html" class="nav-item active">
-                <span class="nav-icon">👤</span>
-                <span>Perfil</span>
-            </a>
-        </nav>
+  <a href="buscar-vacantes.html">
+    <span class="menu-icon">⌕</span>
+    Buscar Vacantes
+  </a>
+
+  <a href="postulaciones.html">
+    <span class="menu-icon">▤</span>
+    Mis Postulaciones
+    <em>12</em>
+  </a>
+
+  <a href="perfil.html" class="active">
+    <span class="menu-icon">♙</span>
+    Perfil
+  </a>
+
+  <a href="notificaciones.html">
+    <span class="menu-icon">◔</span>
+    Notificaciones
+    <em>3</em>
+  </a>
+
+  <a href="configuracion.html">
+    <span class="menu-icon">⚙</span>
+    Configuración
+  </a>
+</nav>
+
+  <a href="../index.html" class="logout">↪ Cerrar Sesión</a>
+</aside>
+
+<main class="main">
+  <section class="hero">
+    <div class="avatar-xl">
+      U
+      <button>📷</button>
     </div>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            // Recupera el nombre guardado en LocalStorage
-            const nombreGuardado = localStorage.getItem("usuarioNombre") || "Itzel Modesto";
-            document.getElementById("user-name").textContent = nombreGuardado;
+    <div class="hero-info">
+      <h2>Usuario</h2>
+      <p>Desarrollo de Software · Ciudad Juárez</p>
 
-            // Extrae la primera letra para colocarla automáticamente en el avatar
-            const primeraLetra = nombreGuardado.trim().charAt(0).toUpperCase();
-            document.getElementById("user-avatar").innerHTML = `${primeraLetra} <label class="change-photo">📷</label>`;
-            
-            // Inicializa el contador de caracteres del cuadro de texto
-            updateCharCount();
-        });
+      <div class="hero-progress">
+        <div>
+          <span>Perfil completado</span>
+          <b>87%</b>
+        </div>
+        <div class="progress"><span></span></div>
+      </div>
+    </div>
 
-        // Alterna el estado abierto/cerrado de los acordeones
-        function toggleAccordion(header) {
-            const item = header.parentElement;
-            const arrow = header.querySelector(".arrow");
-            
-            item.classList.toggle("open");
-            
-            if (item.classList.contains("open")) {
-                arrow.textContent = "⌃";
-            } else {
-                arrow.textContent = "collection";
-                arrow.textContent = "⌄";
-            }
-        }
+    <div class="stats">
+      <div>
+        <b>12</b>
+        <span>Postulaciones</span>
+      </div>
+      <div>
+        <b>87%</b>
+        <span>IA Match</span>
+      </div>
+      <div>
+        <b>23</b>
+        <span>Visitas</span>
+      </div>
+    </div>
+  </section>
 
-        // Selecciona y deselecciona habilidades interactivamente
-        function toggleTag(tagElement) {
-            tagElement.classList.toggle("active");
-            let texto = tagElement.textContent;
-            if (tagElement.classList.contains("active")) {
-                if (!texto.startsWith("✓ ")) {
-                    tagElement.textContent = "✓ " + texto;
-                }
-            } else {
-                if (texto.startsWith("✓ ")) {
-                    tagElement.textContent = texto.replace("✓ ", "");
-                }
-            }
-        }
+  <section class="cards-grid">
+    <div class="card">
+      <span class="icon orange">♙</span>
+      <h3>Información Personal</h3>
+      <span class="arrow">⌄</span>
+    </div>
 
-        // Actualiza el contador numérico de caracteres en tiempo real
-        function updateCharCount() {
-            const textarea = document.getElementById("summary-text");
-            const counter = document.getElementById("char-counter");
-            counter.textContent = `${textarea.value.length}/500 caracteres`;
-        }
-    </script>
+    <div class="card">
+      <span class="icon purple">&lt;/&gt;</span>
+      <h3>Habilidades</h3>
+      <b class="badge">6</b>
+      <span class="arrow">⌄</span>
+    </div>
+
+    <div class="card">
+      <span class="icon blue">💼</span>
+      <h3>Perfil Profesional</h3>
+      <span class="arrow">⌄</span>
+    </div>
+
+    <div class="card">
+      <span class="icon green">▤</span>
+      <h3>Resumen Profesional</h3>
+      <span class="arrow">⌄</span>
+    </div>
+
+    <button class="save">GUARDAR CAMBIOS</button>
+  </section>
+</main>
+
+<nav class="bottom-nav">
+  <a href="dashboard.html" class="nav-item">
+    <span class="nav-icon">⌂</span>
+    <span>Dashboard</span>
+  </a>
+  <a href="asistente-ia.html" class="nav-item">
+    <span class="nav-icon">✦</span>
+    <span>IA</span>
+  </a>
+  <a href="buscar-vacantes.html" class="nav-item">
+    <span class="nav-icon">⌕</span>
+    <span>Vacantes</span>
+  </a>
+  <a href="postulaciones.html" class="nav-item">
+    <span class="nav-icon">▤</span>
+    <span>Postul.</span>
+  </a>
+  <a href="perfil.html" class="nav-item active">
+    <span class="nav-icon">♙</span>
+    <span>Perfil</span>
+  </a>
+  <a href="notificaciones.html" class="nav-item">
+    <span class="nav-icon">◔</span>
+    <span>Notif.</span>
+  </a>
+  <a href="configuracion.html" class="nav-item">
+    <span class="nav-icon">⚙</span>
+    <span>Config.</span>
+  </a>
+</nav>
+
 </body>
 </html>

@@ -243,3 +243,13 @@ a { text-decoration: none; color: inherit; }
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; }
 }
+
+.toggle-pw{
+    cursor:pointer;
+    transition:.3s;
+}
+
+.toggle-pw.active{
+    color:#ff7a00;
+    transform:scale(1.1);
+}
