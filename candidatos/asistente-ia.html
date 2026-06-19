@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EMPLEA IA - Asistente IA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/asistente-ia.css">
+</head>
+<body>
+
+<aside class="sidebar">
+  <div class="brand">
+    <div class="logo">
+    <img src="../recursos/EMPLEA IA LOGO.jpeg" alt="EMPLEA IA">
+</div>
+    <h1>EMPLEA <span>IA</span></h1>
+    <div class="bell">⌂</div>
+  </div>
+
+  <div class="user-card">
+    <div class="avatar-sm">U</div>
+    <div>
+      <h3>Usuario</h3>
+      <p>Desarrollo de Software</p>
+    </div>
+  </div>
+
+  <div class="progress-box">
+    <div class="progress-text">
+      <span>Perfil completado</span>
+      <b>87%</b>
+    </div>
+    <div class="progress"><span></span></div>
+  </div>
+
+  <p class="menu-title">MENÚ PRINCIPAL</p>
+
+ <nav class="menu">
+  <a href="dashboard.html">
+    <span class="menu-icon">⌂</span>
+    Inicio
+  </a>
+
+  <a href="asistente-ia.html" class="active">
+    <span class="menu-icon">✦</span>
+    Asistente IA
+    <small></small>
+  </a>
+
+  <a href="buscar-vacantes.html">
+    <span class="menu-icon">⌕</span>
+    Buscar Vacantes
+  </a>
+
+  <a href="postulaciones.html">
+    <span class="menu-icon">▤</span>
+    Mis Postulaciones
+    <em>12</em>
+  </a>
+
+  <a href="perfil.html">
+    <span class="menu-icon">♙</span>
+    Perfil
+  </a>
+
+  <a href="notificaciones.html">
+    <span class="menu-icon">◔</span>
+    Notificaciones
+    <em>3</em>
+  </a>
+
+  <a href="configuracion.html">
+    <span class="menu-icon">⚙</span>
+    Configuración
+  </a>
+</nav>
+
+  <a href="../index.html" class="logout">↪ Cerrar Sesión</a>
+</aside>
+
+<main class="main">
+
+  <header class="dash-header">
+    <div class="dash-titulo">
+      <p class="dash-sub">GEMINI AI</p>
+      <h2>Asistente IA</h2>
+    </div>
+  </header>
+
+  <section class="chat-card">
+
+    <div class="chat-intro">
+      <div class="ia-avatar">✦</div>
+      <div>
+        <h3>¡Hola, Usuario! 👋</h3>
+        <p>Soy tu asistente con IA. Puedo ayudarte a mejorar tu CV, prepararte para entrevistas y encontrar vacantes ideales para ti.</p>
+      </div>
+    </div>
+
+    <div class="chat-mensajes">
+
+      <div class="mensaje bot">
+        <div class="ia-avatar chico">✦</div>
+        <div class="burbuja">
+          <p>He analizado tu perfil. Tu compatibilidad general es del <b>87%</b>. Para mejorarla, te recomiendo agregar al menos 2 proyectos personales con tecnologías como React o Node.js.</p>
+        </div>
+      </div>
+
+      <div class="mensaje usuario">
+        <div class="burbuja">
+          <p>¿Qué vacantes me recomiendas según mi perfil?</p>
+        </div>
+      </div>
+
+      <div class="mensaje bot">
+        <div class="ia-avatar chico">✦</div>
+        <div class="burbuja">
+          <p>Encontré 3 vacantes con alta compatibilidad para ti:</p>
+          <ul>
+            <li><b>Frontend Developer</b> — Tech Solutions · 94% match</li>
+            <li><b>UI/UX Designer</b> — Innovatech · 89% match</li>
+            <li><b>Fullstack Junior</b> — Bitechi Soluciones · 85% match</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="sugerencias-rapidas">
+      <button>Mejorar mi CV</button>
+      <button>Prepararme para entrevista</button>
+      <button>Analizar mi compatibilidad</button>
+    </div>
+
+    <form class="chat-input" action="#" method="post">
+      <input type="text" name="mensaje" placeholder="Escribe tu pregunta para la IA...">
+      <button type="submit">➤</button>
+    </form>
+
+  </section>
+
+</main>
+
+<nav class="bottom-nav">
+  <a href="dashboard.html" class="nav-item">
+    <span class="nav-icon">⌂</span>
+    <span>Inicio</span>
+  </a>
+  <a href="asistente-ia.html" class="nav-item active">
+    <span class="nav-icon">✦</span>
+    <span>IA</span>
+  </a>
+  <a href="buscar-vacantes.html" class="nav-item">
+    <span class="nav-icon">⌕</span>
+    <span>Vacantes</span>
+  </a>
+  <a href="postulaciones.html" class="nav-item">
+    <span class="nav-icon">▤</span>
+    <span>Postul.</span>
+  </a>
+  <a href="perfil.html" class="nav-item">
+    <span class="nav-icon">♙</span>
+    <span>Perfil</span>
+  </a>
+  <a href="notificaciones.html" class="nav-item">
+    <span class="nav-icon">◔</span>
+    <span>Notif.</span>
+  </a>
+  <a href="configuracion.html" class="nav-item">
+    <span class="nav-icon">⚙</span>
+    <span>Config.</span>
+  </a>
+</nav>
+
+</body>
+</html>

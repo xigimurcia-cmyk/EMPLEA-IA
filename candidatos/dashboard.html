@@ -1,114 +1,259 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EMPLEA IA - Dashboard Empresa</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/dashboard-empresas.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EMPLEA IA - Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
 </head>
 <body>
 
-    <div class="layout-container">
-        <aside class="sidebar">
-            <div class="brand">
-                <span class="logo-orange">EMPLEA</span> <span class="logo-white">IA</span>
-            </div>
-            
-            <div class="user-profile">
-                <div class="avatar-emp">TS</div>
-                <div class="user-info">
-                    <h3>Tech Solutions</h3>
-                    <p>Módulo Empresa</p>
-                </div>
-            </div>
+<aside class="sidebar">
+  <div class="brand">
+    <div class="logo">
+    <img src="../recursos/EMPLEA IA LOGO.jpeg" alt="EMPLEA IA">
+</div>
+    <h1>EMPLEA <span>IA</span></h1>
+    <div class="bell">⌂</div>
+  </div>
 
-            <nav class="menu">
-                <p class="menu-label">PANEL EMPRESARIAL</p>
-                <a href="dashboard-empresas.html" class="menu-item active">Inicio / Dashboard</a>
-                <a href="vacantes-empresas.html" class="menu-item">Gestionar Vacantes <span class="counter">4</span></a>
-                <a href="crear-vacante.html" class="menu-item">Publicar Vacante</a>
-                <a href="candidatos-interes.html" class="menu-item">Talento Guardado</a>
-                <a href="configuracion-empresa.html" class="menu-item">Configuración Empresa</a>
-            </nav>
-
-            <div class="sidebar-footer">
-                <a href="../landing.html" class="logout-btn">Cerrar Sesión empresarial</a>
-            </div>
-        </aside>
-
-        <main class="main-content">
-            <header class="top-header">
-                <div class="page-title">
-                    <p class="sub">EMPRESA PANEL</p>
-                    <h2>Bienvenido, Reclutador</h2>
-                </div>
-                <div class="header-actions">
-                    <span class="company-tag">Tech Solutions Inc.</span>
-                    <div class="user-top-avatar"></div>
-                </div>
-            </header>
-
-            <div class="metrics-grid">
-                <div class="metric-card">
-                    <div class="metric-val">4</div>
-                    <div class="metric-lbl">Vacantes Activas</div>
-                </div>
-                <div class="metric-card">
-                    <div class="metric-val">48</div>
-                    <div class="metric-lbl">Postulantes Totales</div>
-                </div>
-                <div class="metric-card">
-                    <div class="metric-val">6</div>
-                    <div class="metric-lbl">Entrevistas esta semana</div>
-                </div>
-            </div>
-
-            <div class="section-block">
-                <div class="block-header">
-                    <h3>Candidatos Ideales Sugeridos por IA</h3>
-                    <span class="ia-sparkle">✨ Optimizado con Gemini IA</span>
-                </div>
-
-                <div class="talento-list">
-                    <div class="talento-item">
-                        <div class="talento-main">
-                            <div class="talento-avatar">CC</div>
-                            <div class="talento-info">
-                                <h4>Carlos Contreras</h4>
-                                <p>Ingeniero de Software | React, Node.js, Git</p>
-                            </div>
-                        </div>
-                        <div class="talento-match">
-                            <span class="match-pct">94% match</span>
-                            <p class="match-vac">para Vacante: Frontend Dev</p>
-                        </div>
-                        <div class="talento-actions">
-                            <a href="ver-perfil-candidato.html?id=1" class="btn-secondary">Ver Perfil</a>
-                        </div>
-                    </div>
-
-                    <div class="talento-item">
-                        <div class="talento-main">
-                            <div class="talento-avatar">AM</div>
-                            <div class="talento-info">
-                                <h4>Ana Martínez</h4>
-                                <p>UI/UX Designer | Figma, Adobe XD, Prototipado</p>
-                            </div>
-                        </div>
-                        <div class="talento-match">
-                            <span class="match-pct">89% match</span>
-                            <p class="match-vac">para Vacante: Diseñador UI</p>
-                        </div>
-                        <div class="talento-actions">
-                            <a href="ver-perfil-candidato.html?id=2" class="btn-secondary">Ver Perfil</a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </main>
+  <div class="user-card">
+    <div class="avatar-sm">U</div>
+    <div>
+      <h3>Usuario</h3>
+      <p>Desarrollo de Software</p>
     </div>
+  </div>
+
+  <div class="progress-box">
+    <div class="progress-text">
+      <span>Perfil completado</span>
+      <b>87%</b>
+    </div>
+    <div class="progress"><span></span></div>
+  </div>
+
+  <p class="menu-title">MENÚ PRINCIPAL</p>
+
+ <nav class="menu">
+  <a href="dashboard.html" class="active">
+    <span class="menu-icon">⌂</span>
+    Inicio
+  </a>
+
+  <a href="asistente-ia.html">
+    <span class="menu-icon">✦</span>
+    Asistente IA
+    <small>NEW</small>
+  </a>
+
+  <a href="buscar-vacantes.html">
+    <span class="menu-icon">⌕</span>
+    Buscar Vacantes
+  </a>
+
+  <a href="postulaciones.html">
+    <span class="menu-icon">▤</span>
+    Mis Postulaciones
+    <em>12</em>
+  </a>
+
+  <a href="perfil.html">
+    <span class="menu-icon">♙</span>
+    Perfil
+  </a>
+
+  <a href="notificaciones.html">
+    <span class="menu-icon">◔</span>
+    Notificaciones
+    <em>3</em>
+  </a>
+
+  <a href="configuracion.html">
+    <span class="menu-icon">⚙</span>
+    Configuración
+  </a>
+</nav>
+
+  <a href="../index.html" class="logout">↪ Cerrar Sesión</a>
+</aside>
+
+<main class="main">
+
+  <header class="dash-header">
+    <div class="dash-titulo">
+      <p class="dash-sub">EMPLEA IA</p>
+      <h2>Inicio</h2>
+    </div>
+    <div class="dash-buscador">
+      <input type="text" placeholder="Buscar...">
+    </div>
+  </header>
+
+  <section class="stats-grid">
+    <div class="stat-card">
+      <span class="stat-icono azul">▤</span>
+      <b>12</b>
+      <p>Postulaciones</p>
+    </div>
+    <div class="stat-card">
+      <span class="stat-icono verde">◷</span>
+      <b>3</b>
+      <p>Entrevistas <small>Esta semana</small></p>
+    </div>
+    <div class="stat-card">
+      <span class="stat-icono naranja">▣</span>
+      <b>5</b>
+      <p>Interesadas <small>Empresas</small></p>
+    </div>
+    <div class="stat-card">
+      <span class="stat-icono purpura">★</span>
+      <b>87%</b>
+      <p>IA Match <small>+2pt semana</small></p>
+    </div>
+    <div class="stat-card">
+      <span class="stat-icono verde">✓</span>
+      <b>87%</b>
+      <p>Perfil completo <small>Agrega proyectos</small></p>
+    </div>
+  </section>
+
+  <section class="dash-grid">
+
+    <div class="dash-col-principal">
+
+      <div class="cv-card">
+        <p class="card-label">DOCUMENTOS</p>
+        <h3>Currículum Vitae</h3>
+
+        <div class="cv-item">
+          <span class="cv-icono">▤</span>
+          <div class="cv-info">
+            <h4>CV_Usuario_2026.pdf</h4>
+            <p>Actualizado: 08 Jun 2026 · 2.4 MB</p>
+            <span class="cv-estado">● CV cargado y activo</span>
+          </div>
+        </div>
+
+        <div class="cv-botones">
+          <button class="btn-subir">↑ Subir CV</button>
+          <button class="btn-secundario">↻ Actualizar</button>
+          <button class="btn-secundario">◉ Ver CV</button>
+        </div>
+      </div>
+
+      <div class="ia-card">
+        <div class="ia-card-header">
+          <span class="ia-badge">✦ GEMINI AI</span>
+          <h3>Análisis IA del Currículum</h3>
+          <span class="ia-activo">● ACTIVO</span>
+        </div>
+
+        <div class="ia-compat">
+          <div class="ia-compat-top">
+            <span>★ COMPATIBILIDAD DEL PERFIL</span>
+            <b>87%</b>
+          </div>
+          <div class="progress"><span style="width:87%"></span></div>
+          <div class="ia-compat-labels">
+            <small>Básico</small>
+            <small class="naranja">↑ +5pt vs. mes anterior</small>
+            <small>Experto</small>
+          </div>
+        </div>
+
+        <p class="ia-subtitulo">HABILIDADES DETECTADAS</p>
+        <div class="skills-list">
+          <span class="skill-tag">✓ React</span>
+          <span class="skill-tag">✓ JavaScript</span>
+          <span class="skill-tag">✓ HTML</span>
+          <span class="skill-tag">✓ CSS</span>
+          <span class="skill-tag">✓ Python</span>
+          <span class="skill-tag">✓ MySQL</span>
+          <span class="skill-tag">✓ Git</span>
+        </div>
+      </div>
+
+    </div>
+
+    <aside class="dash-col-lateral">
+      <p class="card-label">ÚLTIMAS</p>
+      <h3>Actividad reciente</h3>
+
+      <div class="actividad-item">
+        <span class="actividad-icono azul">◉</span>
+        <div>
+          <h4>Tech Solutions vio tu perfil</h4>
+          <p>hace 2h</p>
+        </div>
+      </div>
+
+      <div class="actividad-item">
+        <span class="actividad-icono verde">✓</span>
+        <div>
+          <h4>Entrevista confirmada — Frontend Dev</h4>
+          <p>hace 5h</p>
+        </div>
+      </div>
+
+      <div class="actividad-item">
+        <span class="actividad-icono naranja">⚡</span>
+        <div>
+          <h4>Nueva vacante compatible al 88%</h4>
+          <p>hace 1d</p>
+        </div>
+      </div>
+
+      <div class="actividad-item">
+        <span class="actividad-icono morado">▤</span>
+        <div>
+          <h4>Innovatech revisó tu CV</h4>
+          <p>hace 2d</p>
+        </div>
+      </div>
+
+      <div class="insight-box">
+        <p class="insight-titulo">⚡ INSIGHT SEMANAL</p>
+        <p>Tu perfil fue visto 23 veces esta semana. Agregar proyectos podría triplicar esa visibilidad.</p>
+      </div>
+    </aside>
+
+  </section>
+
+</main>
+
+<nav class="bottom-nav">
+  <a href="dashboard.html" class="nav-item active">
+    <span class="nav-icon">⌂</span>
+    <span>Dashboard</span>
+  </a>
+  <a href="asistente-ia.html" class="nav-item">
+    <span class="nav-icon">✦</span>
+    <span>IA</span>
+  </a>
+  <a href="buscar-vacantes.html" class="nav-item">
+    <span class="nav-icon">⌕</span>
+    <span>Vacantes</span>
+  </a>
+  <a href="postulaciones.html" class="nav-item">
+    <span class="nav-icon">▤</span>
+    <span>Postul.</span>
+  </a>
+  <a href="perfil.html" class="nav-item">
+    <span class="nav-icon">♙</span>
+    <span>Perfil</span>
+  </a>
+  <a href="notificaciones.html" class="nav-item">
+    <span class="nav-icon">◔</span>
+    <span>Notif.</span>
+  </a>
+  <a href="configuracion.html" class="nav-item">
+    <span class="nav-icon">⚙</span>
+    <span>Config.</span>
+  </a>
+</nav>
 
 </body>
 </html>

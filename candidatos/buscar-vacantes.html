@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EMPLEA IA - Buscar Vacantes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/buscar-vacantes.css">
+</head>
+<body>
+
+<aside class="sidebar">
+  <div class="brand">
+    <div class="logo">
+    <img src="../recursos/EMPLEA IA LOGO.jpeg" alt="EMPLEA IA">
+</div>
+    <h1>EMPLEA <span>IA</span></h1>
+    <div class="bell">⌂</div>
+  </div>
+
+  <div class="user-card">
+    <div class="avatar-sm">U</div>
+    <div>
+      <h3>Usuario</h3>
+      <p>Desarrollo de Software</p>
+    </div>
+  </div>
+
+  <div class="progress-box">
+    <div class="progress-text">
+      <span>Perfil completado</span>
+      <b>87%</b>
+    </div>
+    <div class="progress"><span></span></div>
+  </div>
+
+  <p class="menu-title">MENÚ PRINCIPAL</p>
+
+ <nav class="menu">
+  <a href="dashboard.html">
+    <span class="menu-icon">⌂</span>
+    Inicio
+  </a>
+
+  <a href="asistente-ia.html">
+    <span class="menu-icon">✦</span>
+    Asistente IA
+    <small>NEW</small>
+  </a>
+
+  <a href="buscar-vacantes.html" class="active">
+    <span class="menu-icon">⌕</span>
+    Buscar Vacantes
+  </a>
+
+  <a href="postulaciones.html">
+    <span class="menu-icon">▤</span>
+    Mis Postulaciones
+    <em>12</em>
+  </a>
+
+  <a href="perfil.html">
+    <span class="menu-icon">♙</span>
+    Perfil
+  </a>
+
+  <a href="notificaciones.html">
+    <span class="menu-icon">◔</span>
+    Notificaciones
+    <em>3</em>
+  </a>
+
+  <a href="configuracion.html">
+    <span class="menu-icon">⚙</span>
+    Configuración
+  </a>
+</nav>
+
+  <a href="../index.html" class="logout">↪ Cerrar Sesión</a>
+</aside>
+
+<main class="main">
+
+  <header class="dash-header">
+    <div class="dash-titulo">
+      <p class="dash-sub">EMPLEA IA</p>
+      <h2>Buscar Vacantes</h2>
+    </div>
+  </header>
+
+  <form class="buscador-form" action="#" method="get">
+    <input type="text" name="busqueda" placeholder="Puesto, empresa o palabra clave...">
+    <button type="submit">Buscar</button>
+  </form>
+
+  <div class="filtros">
+    <button class="filtro-chip activo">Todas</button>
+    <button class="filtro-chip">Remoto</button>
+    <button class="filtro-chip">Tiempo completo</button>
+    <button class="filtro-chip">Mejor match IA</button>
+    <button class="filtro-chip">Recientes</button>
+  </div>
+
+  <section class="vacantes-grid">
+
+    <article class="vacante-card">
+      <div class="vacante-top">
+        <div class="vacante-logo naranja">TS</div>
+        <span class="match-badge alto">94% match</span>
+      </div>
+      <h3>Frontend Developer</h3>
+      <p class="vacante-empresa">Tech Solutions Inc. · Ciudad Juárez</p>
+      <div class="vacante-tags">
+        <span>React</span>
+        <span>JavaScript</span>
+        <span>CSS</span>
+      </div>
+      <div class="vacante-footer">
+        <span class="vacante-salario">$18,000 - $24,000</span>
+        <a href="vacante-detalle.html" class="btn-ver">Ver vacante</a>
+      </div>
+    </article>
+
+    <article class="vacante-card">
+      <div class="vacante-top">
+        <div class="vacante-logo azul">IT</div>
+        <span class="match-badge alto">89% match</span>
+      </div>
+      <h3>UI/UX Designer</h3>
+      <p class="vacante-empresa">Innovatech · Remoto</p>
+      <div class="vacante-tags">
+        <span>Figma</span>
+        <span>Adobe XD</span>
+        <span>Prototipado</span>
+      </div>
+      <div class="vacante-footer">
+        <span class="vacante-salario">$16,000 - $20,000</span>
+        <a href="vacante-detalle.html" class="btn-ver">Ver vacante</a>
+      </div>
+    </article>
+
+    <article class="vacante-card">
+      <div class="vacante-top">
+        <div class="vacante-logo verde">BS</div>
+        <span class="match-badge medio">85% match</span>
+      </div>
+      <h3>Fullstack Developer Junior</h3>
+      <p class="vacante-empresa">Bitechi Soluciones · Ciudad Juárez</p>
+      <div class="vacante-tags">
+        <span>Next.js</span>
+        <span>Node.js</span>
+        <span>MySQL</span>
+      </div>
+      <div class="vacante-footer">
+        <span class="vacante-salario">$15,000 - $19,000</span>
+        <a href="vacante-detalle.html" class="btn-ver">Ver vacante</a>
+      </div>
+    </article>
+
+    <article class="vacante-card">
+      <div class="vacante-top">
+        <div class="vacante-logo purpura">PX</div>
+        <span class="match-badge medio">78% match</span>
+      </div>
+      <h3>Backend Developer</h3>
+      <p class="vacante-empresa">PixelCraft · Híbrido</p>
+      <div class="vacante-tags">
+        <span>Python</span>
+        <span>MySQL</span>
+        <span>Git</span>
+      </div>
+      <div class="vacante-footer">
+        <span class="vacante-salario">$20,000 - $26,000</span>
+        <a href="vacante-detalle.html" class="btn-ver">Ver vacante</a>
+      </div>
+    </article>
+
+  </section>
+
+</main>
+
+<nav class="bottom-nav">
+  <a href="dashboard.html" class="nav-item">
+    <span class="nav-icon">⌂</span>
+    <span>Dashboard</span>
+  </a>
+  <a href="asistente-ia.html" class="nav-item">
+    <span class="nav-icon">✦</span>
+    <span>IA</span>
+  </a>
+  <a href="buscar-vacantes.html" class="nav-item active">
+    <span class="nav-icon">⌕</span>
+    <span>Vacantes</span>
+  </a>
+  <a href="postulaciones.html" class="nav-item">
+    <span class="nav-icon">▤</span>
+    <span>Postul.</span>
+  </a>
+  <a href="perfil.html" class="nav-item">
+    <span class="nav-icon">♙</span>
+    <span>Perfil</span>
+  </a>
+  <a href="notificaciones.html" class="nav-item">
+    <span class="nav-icon">◔</span>
+    <span>Notif.</span>
+  </a>
+  <a href="configuracion.html" class="nav-item">
+    <span class="nav-icon">⚙</span>
+    <span>Config.</span>
+  </a>
+</nav>
+
+</body>
+</html>
