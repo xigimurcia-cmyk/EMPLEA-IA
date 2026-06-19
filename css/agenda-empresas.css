@@ -105,7 +105,6 @@ body {
   flex-shrink: 0;
 }
 
-
 .circulo-naranja { background-color: var(--naranja); }
 .circulo-azul { background-color: var(--azul); }
 .circulo-verde { background-color: var(--verde); }
@@ -124,7 +123,6 @@ body {
   color: var(--texto-secundario);
 }
 
-/* Badge de modalidad: Video o Presencial */
 .modalidad {
   font-size: 12px;
   font-weight: bold;
@@ -133,7 +131,6 @@ body {
   white-space: nowrap;
 }
 
-/* CORREGIDO: ya usa variable en vez de color directo */
 .modalidad.video {
   background-color: var(--azul-claro);
   color: var(--azul);
@@ -144,7 +141,6 @@ body {
   color: var(--naranja);
 }
 
-/* Cajitas de fecha y hora */
 .cita-detalles {
   display: flex;
   gap: 12px;
@@ -174,9 +170,6 @@ body {
   color: var(--texto-principal);
 }
 
-/* ============================== */
-/* FORMULARIO: Nueva Entrevista */
-/* ============================== */
 .form-entrevista {
   display: none;
   max-width: 900px;
@@ -242,9 +235,7 @@ body {
   color: white;
 }
 
-/* ============================== */
-/* SIDEBAR (escritorio) */
-/* ============================== */
+/* ── SIDEBAR (escritorio) ─────────────────── */
 .sidebar {
   position: fixed;
   top: 0;
@@ -286,88 +277,6 @@ body {
 }
 
 .sidebar-nav a {
-  color: var(--texto-claro);
-  text-decoration: none;
-  font-size: 15px;
-  padding: 12px 16px;
-  border-radius: 12px;
-}
-
-.sidebar-nav a:hover {
-  background-color: var(--gris-medio);
-  color: var(--blanco);
-}
-
-.sidebar-nav a.active {
-  background-color: var(--naranja);
-  color: var(--blanco);
-  font-weight: bold;
-}
-
-.sidebar-logout {
-  color: var(--texto-claro);
-  text-decoration: none;
-  font-size: 14px;
-  padding: 12px 16px;
-  border-radius: 12px;
-}
-
-.sidebar-logout:hover {
-  background-color: var(--gris-medio);
-  color: var(--blanco);
-}
-
-/* ============================== */
-/* BOTTOM NAV (móvil — oculto por defecto) */
-/* ============================== */
-.bottom-nav {
-  display: none;
-}
-
-@media (max-width: 850px) {
-  body {
-    padding-left: 0;
-  }
-
-  .sidebar {
-    display: none;
-  }
-
-  .bottom-nav {
-    display: flex;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: var(--gris-oscuro);
-    justify-content: space-around;
-    padding: 10px 0 16px;
-    z-index: 100;
-  }
-
-  .bottom-nav a {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-decoration: none;
-    color: var(--texto-claro);
-    gap: 4px;
-  }
-
-  .bottom-nav a.active {
-    color: var(--naranja);
-  }
-
-  .bottom-nav a span {
-    font-size: 22px;
-  }
-
-  .bottom-nav a small {
-    font-size: 11px;
-  }
-}
-
-.sidebar-nav a {
   display: flex;
   align-items: center;
   gap: 14px;
@@ -391,19 +300,66 @@ body {
   color: var(--naranja);
 }
 
-.bottom-nav a {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4px;
-  color: var(--texto-claro);
+.sidebar-logout {
+  color: var(--rojo);
   text-decoration: none;
+  font-size: 14px;
+  padding: 12px 16px;
+  border-radius: 12px;
 }
 
-.bottom-nav a .menu-icon {
-  font-size: 18px;
+.sidebar-logout:hover {
+  background-color: var(--gris-medio);
+  color: var(--blanco);
 }
 
-.bottom-nav a.active {
-  color: var(--naranja);
+/* ── BOTTOM NAV (oculto por defecto) ──────── */
+.bottom-nav {
+  display: none;
+}
+
+/* ── RESPONSIVO ────────────────────────────── */
+@media (max-width: 850px) {
+  body {
+    padding-left: 0;
+    padding-bottom: 80px;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .bottom-nav {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--blanco);
+    border-top: 1px solid rgba(0,0,0,0.08);
+    justify-content: space-around;
+    padding: 10px 0 16px;
+    z-index: 100;
+  }
+
+  .bottom-nav a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: var(--texto-secundario);
+    gap: 4px;
+  }
+
+  .bottom-nav a.active {
+    color: var(--naranja);
+  }
+
+  .bottom-nav a .menu-icon {
+    font-size: 18px;
+  }
+
+  .bottom-nav a small {
+    font-size: 11px;
+  }
 }
