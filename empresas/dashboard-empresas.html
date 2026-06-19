@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard — EMPLEA IA</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dashboard-empresas.css">
+</head>
+<body>
+
+  <aside class="sidebar">
+    <div class="sidebar-logo">
+      <img src="../recursos/EMPLEA IA LOGO.jpeg" alt="EMPLEA IA">
+      <span>EMPLEA IA</span>
+    </div>
+    <nav class="sidebar-nav">
+      <a href="dashboard-empresas.html" class="active">
+        <span class="menu-icon">☷</span>
+        Inicio
+      </a>
+      <a href="vacantes-empresas.html">
+        <span class="menu-icon">▣</span>
+        Vacantes
+      </a>
+      <a href="agenda-empresas.html">
+        <span class="menu-icon">⌚</span>
+        Agenda
+      </a>
+      <a href="candidatos-empresas.html">
+        <span class="menu-icon">◌◌</span>
+        Candidatos
+      </a>
+      <a href="configuracion-empresas.html">
+        <span class="menu-icon">⚙</span>
+        Configuración
+      </a>
+    </nav>
+    <a href="portal-empresas.html" class="sidebar-logout">
+      <span class="menu-icon">↺</span>
+      Cerrar Sesión
+    </a>
+  </aside>
+
+  <section class="hero">
+    <div class="hero-titulo">
+      <img src="../recursos/EMPLEA IA LOGO.jpeg" alt="EMPLEA IA" class="hero-logo">
+      <h1>Inicio</h1>
+    </div>
+  </section>
+
+  <section class="stats-grid">
+    <div class="stat-card">
+      <div class="stat-icono naranja">💼</div>
+      <span class="stat-tendencia">↗</span>
+      <h2 class="stat-numero">4</h2>
+      <p class="stat-label">Vacantes activas</p>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-icono azul">👥</div>
+      <span class="stat-tendencia">↗</span>
+      <h2 class="stat-numero">49</h2>
+      <p class="stat-label">Candidatos</p>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-icono verde">📅</div>
+      <span class="stat-tendencia">↗</span>
+      <h2 class="stat-numero">4</h2>
+      <p class="stat-label">Entrevistas</p>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-icono purpura">⭐</div>
+      <span class="stat-tendencia">↗</span>
+      <h2 class="stat-numero">84%</h2>
+      <p class="stat-label">IA Match prom.</p>
+    </div>
+  </section>
+
+  <section class="vacantes-recientes">
+    <div class="seccion-header">
+      <h3>Vacantes recientes</h3>
+      <button class="btn-nueva">+ Nueva</button>
+    </div>
+
+    <table class="tabla-vacantes">
+      <thead>
+        <tr>
+          <th>Vacante</th>
+          <th>Cand.</th>
+          <th>Estado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <strong>Frontend Developer</strong>
+            <p class="vacante-sub">$25-35K · 01 Jun</p>
+          </td>
+          <td class="cand-num">15</td>
+          <td><span class="badge-estado activa">Activa</span></td>
+        </tr>
+        <tr>
+          <td>
+            <strong>Backend Developer</strong>
+            <p class="vacante-sub">$30-40K · 28 May</p>
+          </td>
+          <td class="cand-num">8</td>
+          <td><span class="badge-estado activa">Activa</span></td>
+        </tr>
+        <tr>
+          <td>
+            <strong>UX/UI Designer</strong>
+            <p class="vacante-sub">$18-26K · 20 May</p>
+          </td>
+          <td class="cand-num">22</td>
+          <td><span class="badge-estado pausada">Pausada</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="top-candidatos">
+    <div class="seccion-header">
+      <h3>Top Candidatos IA</h3>
+      <a href="candidatos-empresas.html" class="link-ver-todos">Ver todos →</a>
+    </div>
+
+    <div class="candidato-item">
+      <div class="circulo-nombre circulo-naranja">US</div>
+      <div class="candidato-info">
+        <h4>Usuario</h4>
+        <p>Frontend Developer</p>
+      </div>
+      <span class="match-pct">⭐ 91%</span>
+    </div>
+
+    <div class="candidato-item">
+      <div class="circulo-nombre circulo-azul">US</div>
+      <div class="candidato-info">
+        <h4>Usuario</h4>
+        <p>Backend Developer</p>
+      </div>
+      <span class="match-pct">⭐ 88%</span>
+    </div>
+
+    <div class="candidato-item">
+      <div class="circulo-nombre circulo-verde">AF</div>
+      <div class="candidato-info">
+        <h4>Ana Flores</h4>
+        <p>UX/UI Designer</p>
+      </div>
+      <span class="match-pct">⭐ 82%</span>
+    </div>
+  </section>
+
+  <nav class="bottom-nav">
+    <a href="dashboard-empresas.html" class="active">
+      <span class="menu-icon">☷</span>
+      <small>Dashboard</small>
+    </a>
+    <a href="vacantes-empresas.html">
+      <span class="menu-icon">▣</span>
+      <small>Vacantes</small>
+    </a>
+    <a href="agenda-empresas.html">
+      <span class="menu-icon">⌚</span>
+      <small>Agenda</small>
+    </a>
+    <a href="candidatos-empresas.html">
+      <span class="menu-icon">◌◌</span>
+      <small>Candidatos</small>
+      <a href="portal-empresas.html">
+      <span class="menu-icon">↺</span>
+      <small>Salir</small>
+    
+    </a>
+  </nav>
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMPLEA IA - Mis Vacantes</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/vacantes-empresas.css">
+</head>
+<body>
+
+    <div class="layout-container">
+        <aside class="sidebar">
+            <div class="brand"><span class="logo-orange">EMPLEA</span> <span class="logo-white">IA</span></div>
+            <div class="user-profile">
+                <div class="avatar-emp">TS</div>
+                <div class="user-info"><h3>Tech Solutions</h3><p>Módulo Empresa</p></div>
+            </div>
+            <nav class="menu">
+                <p class="menu-label">PANEL EMPRESARIAL</p>
+                <a href="dashboard-empresas.html" class="menu-item">Inicio / Dashboard</a>
+                <a href="vacantes-empresas.html" class="menu-item active">Gestionar Vacantes <span class="counter">4</span></a>
+                <a href="crear-vacante.html" class="menu-item">Publicar Vacante</a>
+                <a href="candidatos-interes.html" class="menu-item">Talento Guardado</a>
+                <a href="configuracion-empresa.html" class="menu-item">Configuración Empresa</a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-header">
+                <div class="page-title">
+                    <p class="sub">EMPRESA PANEL</p>
+                    <h2>Vacantes Publicadas</h2>
+                </div>
+                <a href="crear-vacante.html" class="btn-primary">+ Publicar Nueva Vacante</a>
+            </header>
+
+            <div class="vacantes-table-container">
+                <table class="vacantes-table">
+                    <thead>
+                        <tr>
+                            <th>Puesto / Posición</th>
+                            <th>Fecha Publicación</th>
+                            <th>Postulados</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <strong>Frontend Developer</strong>
+                                <p class="meta-row">Ciudad Juárez, Chih. | Tiempo Completo</p>
+                            </td>
+                            <td>10 Jun 2026</td>
+                            <td><span class="count-badge">18 candidatos</span></td>
+                            <td><span class="status-pill active">Activa</span></td>
+                            <td><a href="#" class="action-link">Ver detalles</a></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Diseñador UI/UX</strong>
+                                <p class="meta-row">Remoto | Medio Tiempo</p>
+                            </td>
+                            <td>08 Jun 2026</td>
+                            <td><span class="count-badge">14 candidatos</span></td>
+                            <td><span class="status-pill active">Activa</span></td>
+                            <td><a href="#" class="action-link">Ver detalles</a></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>QA Engineer</strong>
+                                <p class="meta-row">Ciudad Juárez, Chih. | Tiempo Completo</p>
+                            </td>
+                            <td>28 May 2026</td>
+                            <td><span class="count-badge">12 candidatos</span></td>
+                            <td><span class="status-pill closed">Cerrada</span></td>
+                            <td><a href="#" class="action-link">Ver detalles</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

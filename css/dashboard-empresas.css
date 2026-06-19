@@ -1,0 +1,373 @@
+/* ═══════════════════════════════════════════
+   EMPLEA IA — dashboard-empresas.css
+   ════════════════════════════════════════ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background-color: var(--gris-claro);
+  color: var(--texto-principal);
+  min-height: 100vh;
+  padding-left: 275px;
+}
+
+/* ── SIDEBAR (escritorio) ─────────────────── */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 275px;
+  height: 100vh;
+  background-color: var(--gris-oscuro);
+  display: flex;
+  flex-direction: column;
+  padding: 32px 24px;
+  z-index: 100;
+}
+
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.sidebar-logo img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.sidebar-logo span {
+  color: var(--blanco);
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.sidebar-nav a {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  border-radius: 18px;
+  color: var(--texto-claro);
+  text-decoration: none;
+}
+
+.menu-icon {
+  font-size: 18px;
+  width: 22px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.sidebar-nav a.active,
+.sidebar-nav a:hover {
+  background: rgba(255,122,0,0.1);
+  border: 1px solid rgba(255,122,0,0.3);
+  color: var(--naranja);
+}
+
+.sidebar-logout {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  border-radius: 18px;
+  color: var(--rojo);
+  text-decoration: none;
+  margin-top: auto;
+}
+
+.sidebar-logout:hover {
+  background: rgba(239,68,68,0.08);
+}
+
+/* ── HERO ─────────────────────────────────── */
+.hero {
+  background: radial-gradient(ellipse at 50% 0%, #3D1F00 0%, var(--gris-oscuro) 60%, #0D0804 100%);
+  padding: 32px 28px;
+  border-radius: 0 0 28px 28px;
+}
+
+.hero-titulo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.hero-logo {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.hero-titulo h1 {
+  color: var(--blanco);
+  font-size: 24px;
+  font-weight: 800;
+}
+
+/* ── STATS GRID ───────────────────────────── */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  padding: 28px;
+}
+
+.stat-card {
+  background: var(--blanco);
+  border-radius: 18px;
+  padding: 20px;
+  position: relative;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+}
+
+.stat-icono {
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  margin-bottom: 14px;
+}
+
+.stat-icono.naranja { background: var(--durazno); }
+.stat-icono.azul { background: var(--azul-claro); }
+.stat-icono.verde { background: rgba(34,197,94,0.15); }
+.stat-icono.purpura { background: rgba(139,92,246,0.15); }
+
+.stat-tendencia {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: var(--verde);
+  font-size: 14px;
+}
+
+.stat-numero {
+  font-size: 26px;
+  font-weight: 900;
+  color: var(--texto-principal);
+}
+
+.stat-label {
+  font-size: 12px;
+  color: var(--texto-secundario);
+  margin-top: 4px;
+}
+
+/* ── SECCIONES (vacantes / candidatos) ───── */
+.vacantes-recientes,
+.top-candidatos {
+  background: var(--blanco);
+  border-radius: 18px;
+  margin: 0 28px 24px;
+  padding: 24px;
+}
+
+.seccion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.seccion-header h3 {
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.btn-nueva {
+  background: linear-gradient(135deg, #F09030 0%, var(--naranja) 60%, #C96A18 100%);
+  color: var(--blanco);
+  border: none;
+  padding: 10px 18px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.link-ver-todos {
+  color: var(--naranja);
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* ── TABLA VACANTES ───────────────────────── */
+.tabla-vacantes {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabla-vacantes thead th {
+  text-align: left;
+  font-size: 11px;
+  color: var(--texto-secundario);
+  font-weight: 700;
+  padding: 10px 8px;
+  border-bottom: 1px solid var(--gris-claro);
+}
+
+.tabla-vacantes tbody td {
+  padding: 14px 8px;
+  border-bottom: 1px solid var(--gris-claro);
+  font-size: 14px;
+}
+
+.vacante-sub {
+  font-size: 12px;
+  color: var(--texto-secundario);
+  margin-top: 2px;
+}
+
+.cand-num {
+  color: var(--naranja);
+  font-weight: 800;
+}
+
+.badge-estado {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 999px;
+}
+
+.badge-estado.activa {
+  background: rgba(34,197,94,0.12);
+  color: var(--verde);
+}
+
+.badge-estado.pausada {
+  background: var(--durazno);
+  color: var(--naranja);
+}
+
+/* ── TOP CANDIDATOS ───────────────────────── */
+.candidato-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--gris-claro);
+}
+
+.candidato-item:last-child {
+  border-bottom: none;
+}
+
+.circulo-nombre {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blanco);
+  font-weight: 800;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.circulo-naranja { background: var(--naranja); }
+.circulo-azul { background: var(--azul); }
+.circulo-verde { background: var(--verde); }
+
+.candidato-info {
+  flex: 1;
+}
+
+.candidato-info h4 {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.candidato-info p {
+  font-size: 12px;
+  color: var(--texto-secundario);
+  margin-top: 2px;
+}
+
+.match-pct {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--naranja);
+}
+
+/* ── BOTTOM NAV (oculto por defecto) ──────── */
+.bottom-nav {
+  display: none;
+}
+
+/* ── RESPONSIVO ────────────────────────────── */
+@media (max-width: 850px) {
+  .sidebar {
+    display: none;
+  }
+
+  body {
+    padding-left: 0;
+    padding-bottom: 80px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .vacantes-recientes,
+  .top-candidatos {
+    margin: 0 20px 20px;
+  }
+
+  .bottom-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: var(--blanco);
+    border-top: 1px solid rgba(0,0,0,0.08);
+    padding: 10px 0;
+    z-index: 100;
+  }
+
+  .bottom-nav a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    text-decoration: none;
+    color: var(--texto-secundario);
+    font-size: 11px;
+  }
+
+  .bottom-nav a.active {
+    color: var(--naranja);
+  }
+
+  .bottom-nav .menu-icon {
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,389 @@
+/* ═══════════════════════════════════════════
+   EMPLEA IA — candidatos-empresas.css
+   ════════════════════════════════════════ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background-color: var(--gris-claro);
+  color: var(--texto-principal);
+  min-height: 100vh;
+  padding-left: 275px;
+}
+
+/* ── SIDEBAR (escritorio) ─────────────────── */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 275px;
+  height: 100vh;
+  background-color: var(--gris-oscuro);
+  display: flex;
+  flex-direction: column;
+  padding: 32px 24px;
+  z-index: 100;
+}
+
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.sidebar-logo img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.sidebar-logo span {
+  color: var(--blanco);
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.sidebar-nav a {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  border-radius: 18px;
+  color: var(--texto-claro);
+  text-decoration: none;
+}
+
+.menu-icon {
+  font-size: 18px;
+  width: 22px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.sidebar-nav a.active,
+.sidebar-nav a:hover {
+  background: rgba(255,122,0,0.1);
+  border: 1px solid rgba(255,122,0,0.3);
+  color: var(--naranja);
+}
+
+.sidebar-logout {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  border-radius: 18px;
+  color: var(--rojo);
+  text-decoration: none;
+  margin-top: auto;
+}
+
+.sidebar-logout:hover {
+  background: rgba(239,68,68,0.08);
+}
+
+/* ── HERO ─────────────────────────────────── */
+.hero {
+  background: radial-gradient(ellipse at 50% 0%, #3D1F00 0%, var(--gris-oscuro) 60%, #0D0804 100%);
+  padding: 32px 28px;
+  border-radius: 0 0 28px 28px;
+}
+
+.hero-titulo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.hero-logo {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.hero-titulo h1 {
+  color: var(--blanco);
+  font-size: 24px;
+  font-weight: 800;
+}
+
+/* ── CONTENIDO ─────────────────────────────── */
+.candidatos-contenido {
+  padding: 28px;
+}
+
+/* ── BARRA DE BÚSQUEDA ────────────────────── */
+.busqueda-barra {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.busqueda-input {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--blanco);
+  border-radius: 16px;
+  padding: 14px 18px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.04);
+}
+
+.icono-buscar {
+  font-size: 16px;
+  opacity: 0.5;
+}
+
+.busqueda-input input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  background: transparent;
+  color: var(--texto-principal);
+}
+
+.busqueda-input input::placeholder {
+  color: var(--texto-secundario);
+}
+
+.btn-filtro {
+  width: 50px;
+  background: var(--blanco);
+  border: none;
+  border-radius: 16px;
+  font-size: 16px;
+  color: var(--texto-secundario);
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.04);
+}
+
+/* ── LISTA DE CANDIDATOS ───────────────────── */
+.candidatos-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.candidato-card {
+  background: var(--blanco);
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+}
+
+.candidato-encabezado {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.circulo-nombre {
+  width: 50px;
+  height: 50px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blanco);
+  font-weight: 800;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.circulo-naranja { background: var(--naranja); }
+.circulo-azul { background: var(--azul); }
+.circulo-verde { background: var(--verde); }
+
+.candidato-info {
+  flex: 1;
+}
+
+.candidato-info h3 {
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.candidato-info p {
+  font-size: 13px;
+  color: var(--texto-secundario);
+  margin-top: 2px;
+}
+
+.candidato-status {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+}
+
+.status-badge {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.status-entrevista {
+  background: rgba(34,197,94,0.12);
+  color: var(--verde);
+}
+
+.status-revision {
+  background: var(--durazno);
+  color: var(--naranja);
+}
+
+.status-pendiente {
+  background: var(--azul-claro);
+  color: var(--azul);
+}
+
+.candidato-pct {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--naranja);
+}
+
+/* ── TAGS ──────────────────────────────────── */
+.candidato-tags {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+}
+
+.tag {
+  background: var(--gris-claro);
+  color: var(--texto-principal);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 999px;
+}
+
+/* ── BARRA DE PROGRESO ─────────────────────── */
+.candidato-barra-fondo {
+  height: 6px;
+  background: var(--gris-claro);
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 18px;
+}
+
+.candidato-barra-progreso {
+  height: 100%;
+  border-radius: 20px;
+}
+
+.candidato-barra-progreso.verde {
+  background: linear-gradient(90deg, var(--verde), #4ADE80);
+}
+
+.candidato-barra-progreso.naranja {
+  background: linear-gradient(90deg, var(--naranja), var(--naranja-claro));
+}
+
+/* ── ACCIONES ──────────────────────────────── */
+.candidato-acciones {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-ver-perfil,
+.btn-contactar {
+  flex: 1;
+  padding: 13px;
+  border: none;
+  border-radius: 14px;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn-ver-perfil {
+  background: var(--durazno);
+  color: var(--naranja);
+}
+
+.btn-contactar {
+  background: linear-gradient(135deg, #F09030 0%, var(--naranja) 60%, #C96A18 100%);
+  color: var(--blanco);
+}
+
+/* ── BOTTOM NAV (oculto por defecto) ──────── */
+.bottom-nav {
+  display: none;
+}
+
+/* ── RESPONSIVO ────────────────────────────── */
+@media (max-width: 850px) {
+  .sidebar {
+    display: none;
+  }
+
+  body {
+    padding-left: 0;
+    padding-bottom: 80px;
+  }
+
+  .candidatos-contenido {
+    padding: 20px;
+  }
+
+  .candidato-acciones {
+    flex-direction: column;
+  }
+
+  .bottom-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: var(--blanco);
+    border-top: 1px solid rgba(0,0,0,0.08);
+    padding: 10px 0;
+    z-index: 100;
+  }
+
+  .bottom-nav a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    text-decoration: none;
+    color: var(--texto-secundario);
+    font-size: 11px;
+  }
+
+  .bottom-nav a.active {
+    color: var(--naranja);
+  }
+
+  .bottom-nav .menu-icon {
+    font-size: 18px;
+  }
+}
