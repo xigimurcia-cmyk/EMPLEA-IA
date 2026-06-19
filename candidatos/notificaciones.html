@@ -1,125 +1,190 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EMPLEA IA - Notificaciones</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/notificaciones.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EMPLEA IA - Notificaciones</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/notificaciones.css">
 </head>
 <body>
 
-    <div class="layout-container">
-        <aside class="sidebar">
-            <div class="brand">
-                <span class="logo-orange">EMPLEA</span> <span class="logo-white">IA</span>
-            </div>
-            
-            <div class="user-profile">
-                <div class="avatar">XM</div>
-                <div class="user-info">
-                    <h3>Xitlaly Murcia</h3>
-                    <p>Desarrollo de Software</p>
-                </div>
-                <div class="progress-container">
-                    <span class="progress-text">Perfil completado 87%</span>
-                    <div class="progress-bar"><div class="progress-fill"></div></div>
-                </div>
-            </div>
+<aside class="sidebar">
+  <div class="brand">
+    <div class="logo">
+    <img src="../recursos/EMPLEA IA LOGO.jpeg" alt="EMPLEA IA">
+</div>
+    <h1>EMPLEA <span>IA</span></h1>
+    <div class="bell">⌂</div>
+  </div>
 
-            <nav class="menu">
-                <p class="menu-label">MENÚ PRINCIPAL</p>
-                <a href="dashboard.html" class="menu-item">Dashboard</a>
-                <a href="asistente-ia.html" class="menu-item">Asistente IA <span class="badge-new">NEW</span></a>
-                <a href="buscar-vacantes.html" class="menu-item">Buscar Vacantes</a>
-                <a href="postulaciones.html" class="menu-item">Mis Postulaciones <span class="counter">12</span></a>
-                <a href="perfil.html" class="menu-item">Perfil</a>
-                <a href="notificaciones.html" class="menu-item active">Notificaciones <span class="counter orange">3</span></a>
-                <a href="configuracion.html" class="menu-item">Configuración</a>
-            </nav>
-
-            <div class="sidebar-footer">
-                <a href="landing.html" class="logout-btn">Cerrar Sesión</a>
-            </div>
-        </aside>
-
-        <main class="main-content">
-            <header class="top-header">
-                <div class="page-title">
-                    <p class="sub">EMPLEA IA</p>
-                    <h2>Notificaciones</h2>
-                </div>
-                <div class="header-actions">
-                    <input type="text" placeholder="Buscar..." class="search-input">
-                    <div class="user-top-avatar"></div>
-                </div>
-            </header>
-
-            <div class="hero-banner">
-                <span class="banner-tag">Notificaciones <span class="count-tag">3</span></span>
-            </div>
-
-            <div class="tabs-container">
-                <button class="tab-button active">Todas</button>
-                <button class="tab-button">No leídas (3)</button>
-            </div>
-
-            <div class="notifications-list">
-                
-                <div class="notification-card unread">
-                    <div class="icon-wrapper badge-orange-light">💼</div>
-                    <div class="card-body">
-                        <div class="card-header-row">
-                            <h4>Nueva vacante compatible</h4>
-                            <span class="tag-label text-orange">Vacante</span>
-                        </div>
-                        <p class="card-text">Frontend Developer en Tech Solutions tiene 91% de compatibilidad con tu perfil.</p>
-                        <span class="card-time">hace 5 min</span>
-                        <span class="status-dot">Nueva</span>
-                    </div>
-                </div>
-
-                <div class="notification-card unread">
-                    <div class="icon-wrapper badge-blue">👁️</div>
-                    <div class="card-body">
-                        <div class="card-header-row">
-                            <h4>Empresa revisó tu perfil</h4>
-                            <span class="tag-label text-blue">Perfil</span>
-                        </div>
-                        <p class="card-text">Innovatech MX revisó tu perfil profesional hoy a las 10:32 AM.</p>
-                        <span class="card-time">hace 1h</span>
-                        <span class="status-dot">Nueva</span>
-                    </div>
-                </div>
-
-                <div class="notification-card unread">
-                    <div class="icon-wrapper badge-green">🗓️</div>
-                    <div class="card-body">
-                        <div class="card-header-row">
-                            <h4>Entrevista programada</h4>
-                            <span class="tag-label text-green">Entrevista</span>
-                        </div>
-                        <p class="card-text">Tienes una entrevista con Tech Solutions el 12 Jun a las 10:00 AM (Video).</p>
-                        <span class="card-time">hace 3h</span>
-                        <span class="status-dot">Nueva</span>
-                    </div>
-                </div>
-
-                <div class="notification-card">
-                    <div class="icon-wrapper badge-purple">✨</div>
-                    <div class="card-body">
-                        <div class="card-header-row">
-                            <h4>Recomendación de curso por IA</h4>
-                            <span class="tag-label text-purple">Curso IA</span>
-                        </div>
-                        <p class="card-text">Gemini IA recomienda 'React Advanced Patterns'. Aumenta tu compatibilidad un 18%.</p>
-                        <span class="card-time">hace 5h</span>
-                    </div>
-                </div>
-
-            </div>
-        </main>
+  <div class="user-card">
+    <div class="avatar-sm">XM</div>
+    <div>
+      <h3>Xitlaly Murcia</h3>
+      <p>Desarrollo de Software</p>
     </div>
+  </div>
+
+  <div class="progress-box">
+    <div class="progress-text">
+      <span>Perfil completado</span>
+      <b>87%</b>
+    </div>
+    <div class="progress"><span></span></div>
+  </div>
+
+  <p class="menu-title">MENÚ PRINCIPAL</p>
+
+ <nav class="menu">
+  <a href="dashboard.html">
+    <span class="menu-icon">⌂</span>
+    Inicio
+  </a>
+
+  <a href="asistente-ia.html">
+    <span class="menu-icon">✦</span>
+    Asistente IA
+    <small>NEW</small>
+  </a>
+
+  <a href="buscar-vacantes.html">
+    <span class="menu-icon">⌕</span>
+    Buscar Vacantes
+  </a>
+
+  <a href="postulaciones.html">
+    <span class="menu-icon">▤</span>
+    Mis Postulaciones
+    <em>12</em>
+  </a>
+
+  <a href="perfil.html">
+    <span class="menu-icon">♙</span>
+    Perfil
+  </a>
+
+  <a href="notificaciones.html" class="active">
+    <span class="menu-icon">◔</span>
+    Notificaciones
+    <em>3</em>
+  </a>
+
+  <a href="configuracion.html">
+    <span class="menu-icon">⚙</span>
+    Configuración
+  </a>
+</nav>
+
+  <a href="../index.html" class="logout">↪ Cerrar Sesión</a>
+</aside>
+
+<main class="main">
+
+  <header class="dash-header">
+    <div class="dash-titulo">
+      <p class="dash-sub">EMPLEA IA</p>
+      <h2>Notificaciones</h2>
+    </div>
+  </header>
+
+  <div class="hero-banner">
+    <span class="banner-tag">Notificaciones <span class="count-tag">3</span></span>
+  </div>
+
+  <div class="tabs-container">
+    <button class="tab-button active">Todas</button>
+    <button class="tab-button">No leídas (3)</button>
+  </div>
+
+  <div class="notifications-list">
+
+    <div class="notification-card unread">
+      <div class="icon-wrapper badge-orange-light">💼</div>
+      <div class="card-body">
+        <div class="card-header-row">
+          <h4>Nueva vacante compatible</h4>
+          <span class="tag-label text-orange">Vacante</span>
+        </div>
+        <p class="card-text">Frontend Developer en Tech Solutions tiene 91% de compatibilidad con tu perfil.</p>
+        <span class="card-time">hace 5 min</span>
+        <span class="status-dot">Nueva</span>
+      </div>
+    </div>
+
+    <div class="notification-card unread">
+      <div class="icon-wrapper badge-blue">👁️</div>
+      <div class="card-body">
+        <div class="card-header-row">
+          <h4>Empresa revisó tu perfil</h4>
+          <span class="tag-label text-blue">Perfil</span>
+        </div>
+        <p class="card-text">Innovatech MX revisó tu perfil profesional hoy a las 10:32 AM.</p>
+        <span class="card-time">hace 1h</span>
+        <span class="status-dot">Nueva</span>
+      </div>
+    </div>
+
+    <div class="notification-card unread">
+      <div class="icon-wrapper badge-green">🗓️</div>
+      <div class="card-body">
+        <div class="card-header-row">
+          <h4>Entrevista programada</h4>
+          <span class="tag-label text-green">Entrevista</span>
+        </div>
+        <p class="card-text">Tienes una entrevista con Tech Solutions el 12 Jun a las 10:00 AM (Video).</p>
+        <span class="card-time">hace 3h</span>
+        <span class="status-dot">Nueva</span>
+      </div>
+    </div>
+
+    <div class="notification-card">
+      <div class="icon-wrapper badge-purple">✨</div>
+      <div class="card-body">
+        <div class="card-header-row">
+          <h4>Recomendación de curso por IA</h4>
+          <span class="tag-label text-purple">Curso IA</span>
+        </div>
+        <p class="card-text">Gemini IA recomienda 'React Advanced Patterns'. Aumenta tu compatibilidad un 18%.</p>
+        <span class="card-time">hace 5h</span>
+      </div>
+    </div>
+
+  </div>
+
+</main>
+
+<nav class="bottom-nav">
+  <a href="dashboard.html" class="nav-item">
+    <span class="nav-icon">⌂</span>
+    <span>Dashboard</span>
+  </a>
+  <a href="asistente-ia.html" class="nav-item">
+    <span class="nav-icon">✦</span>
+    <span>IA</span>
+  </a>
+  <a href="buscar-vacantes.html" class="nav-item">
+    <span class="nav-icon">⌕</span>
+    <span>Vacantes</span>
+  </a>
+  <a href="postulaciones.html" class="nav-item">
+    <span class="nav-icon">▤</span>
+    <span>Postul.</span>
+  </a>
+  <a href="perfil.html" class="nav-item">
+    <span class="nav-icon">♙</span>
+    <span>Perfil</span>
+  </a>
+  <a href="notificaciones.html" class="nav-item active">
+    <span class="nav-icon">◔</span>
+    <span>Notif.</span>
+  </a>
+  <a href="configuracion.html" class="nav-item">
+    <span class="nav-icon">⚙</span>
+    <span>Config.</span>
+  </a>
+</nav>
 
 </body>
 </html>
