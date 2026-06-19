@@ -12,10 +12,40 @@
 </head>
 <body>
 
+  <aside class="sidebar">
+    <div class="sidebar-logo">
+      <img src="../recursos/EMPLEA IA LOGO.jpeg" alt="EMPLEA IA">
+      <span>EMPLEA IA</span>
+    </div>
+    <nav class="sidebar-nav">
+      <a href="dashboard-empresas.html">
+        <span class="menu-icon">☷</span>
+        Inicio 
+      </a>
+      <a href="vacantes-empresas.html">
+        <span class="menu-icon">▣</span>
+        Vacantes
+      </a>
+      <a href="agenda-empresas.html" class="active">
+        <span class="menu-icon">⌚</span>
+        Agenda
+      </a>
+      <a href="candidatos-empresas.html">
+        <span class="menu-icon">◌◌</span>
+        Candidatos
+      </a>
+      <a href="configuracion-empresas.html">
+        <span class="menu-icon">⚙</span>
+        Configuración
+      </a>
+    </nav>
+    <a href="portal-empresas.html" class="sidebar-logout">
+      <span class="menu-icon">↺</span>
+      Cerrar Sesión
+    </a>
+  </aside>
 
   <section class="hero">
-    <!-- Botón de menú (por ahora decorativo, sin funcionalidad real) -->
-    <button class="btn-menu">☰</button>
 
     
     <div class="hero-titulo">
@@ -27,7 +57,7 @@
   
   <section class="agenda-top">
     <h2 class="contador">4 entrevistas</h2>
-    <button class="btn-agendar" onclick="abrirFormulario()">+ Agendar</button>
+    <button class="btn-agendar">+ Agendar</button>
   </section>
 
  
@@ -55,8 +85,8 @@
     </div>
 
     <div class="botones-form">
-      <button class="btn-cancelar" onclick="cerrarFormulario()">Cancelar</button>
-      <button class="btn-guardar" onclick="cerrarFormulario()">Guardar</button>
+      <button class="btn-cancelar">Cancelar</button>
+      <button class="btn-guardar">Guardar</button>
     </div>
   </section>
 
@@ -153,6 +183,29 @@
     </div>
 
   </section>
+
+  <nav class="bottom-nav">
+    <a href="dashboard-empresas.html">
+      <span class="menu-icon">☷</span>
+      <small>Inicio</small>
+    </a>
+    <a href="vacantes-empresas.html">
+      <span class="menu-icon">▣</span>
+      <small>Vacantes</small>
+    </a>
+    <a href="agenda-empresas.html" class="active">
+      <span class="menu-icon">⌚</span>
+      <small>Agenda</small>
+    </a>
+    <a href="candidatos-empresas.html">
+      <span class="menu-icon">◌◌</span>
+      <small>Candidatos</small>
+    </a>
+    <a href="portal-empresas.html">
+      <span class="menu-icon">↺</span>
+      <small>Salir</small>
+    </a>
+  </nav>
 
   <script src="../js/script.js"></script>
 
