@@ -8,9 +8,3 @@ function mostrarContrasena(id) {
   }
 }
 
-// Función para el menú hamburguesa (☰)
-// Se usa en todas las pantallas con header móvil
-function toggleMenu() {
-  const menu = document.getElementById('menu-principal');
-  menu.classList.toggle('active');
-}
