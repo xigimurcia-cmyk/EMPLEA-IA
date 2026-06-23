@@ -17,6 +17,9 @@ app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'root'
 app.config['MYSQL_PASSWORD'] = 'TU_CONTRASENA_MYSQL'
 app.config['MYSQL_DB'] = 'emplea_ia'
+# DictCursor permite acceder a los datos por nombre en lugar de por posicion
+# Ejemplo: usuario['nombre'] en lugar de usuario[0]
+app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
 mysql = MySQL(app)
 
 # ---- IMPORTAR RUTAS ----
