@@ -2,6 +2,8 @@
 from flask import Flask
 from flask_jwt_extended import JWTManager
 from flask_mysqldb import MySQL
+import firebase_admin
+from firebase_admin import credentials, auth
 
 # Crear la aplicacion Flask
 app = Flask(__name__)
@@ -18,9 +20,13 @@ app.config['MYSQL_USER'] = 'root'
 app.config['MYSQL_PASSWORD'] = 'TU_CONTRASENA_MYSQL'
 app.config['MYSQL_DB'] = 'emplea_ia'
 # DictCursor permite acceder a los datos por nombre en lugar de por posicion
-# Ejemplo: usuario['nombre'] en lugar de usuario[0]
 app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
 mysql = MySQL(app)
+
+# ---- CONFIGURACION DE FIREBASE ----
+# Firebase maneja la autenticacion de usuarios
+cred = credentials.Certificate('serviceAccountKey.json')
+firebase_admin.initialize_app(cred)
 
 # ---- IMPORTAR RUTAS ----
 # Cada modulo tiene sus propias rutas separadas
