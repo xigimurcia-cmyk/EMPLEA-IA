@@ -15,7 +15,7 @@ jwt = JWTManager(app)
 # Cambia TU_CONTRASENA_MYSQL por tu contrasena de MySQL Workbench
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = 'TU_CONTRASENA_MYSQL'
+app.config['MYSQL_PASSWORD'] = 'xitly123'
 app.config['MYSQL_DB'] = 'emplea_ia'
 # DictCursor permite acceder a los datos por nombre en lugar de por posicion
 # Ejemplo: usuario['nombre'] en lugar de usuario[0]

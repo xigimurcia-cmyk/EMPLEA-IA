@@ -1,6 +1,5 @@
 # Importaciones necesarias para las rutas de empresas
 from flask import Blueprint, request, jsonify
-from app import mysql
 import re
 
 # Blueprint del modulo de empresas
