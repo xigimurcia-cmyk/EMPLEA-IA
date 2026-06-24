@@ -47,6 +47,7 @@ def registro_empresa():
     nombre_empresa = request.form['nombre_empresa']
     correo = request.form['correo']
     contrasena = request.form['contrasena']
+    telefono = request.form['telefono']  
 
     # Validar que el correo tenga formato correcto
     if not validar_correo(correo):
@@ -66,8 +67,8 @@ def registro_empresa():
 
     # Guardar los datos de la empresa en MySQL
     cursor = mysql.connection.cursor()
-    cursor.execute('INSERT INTO empresas (nombre_empresa, correo, contrasena) VALUES (%s, %s, %s)',
-                   (nombre_empresa, correo, contrasena))
+    cursor.execute('INSERT INTO empresas (nombre_empresa, correo, contrasena, telefono) VALUES (%s, %s, %s,%s)',
+               (nombre_empresa, correo, contrasena, telefono))
     mysql.connection.commit()  # Confirmar los cambios en la base de datos
     cursor.close()  # Cerrar la conexion
 

@@ -9,7 +9,6 @@
 </head>
 <body>
 
-  <!-- HEADER -->
   <header class="header">
     <a href="portal-empresas.html" class="btn-volver">← Volver</a>
     <div class="logo">
@@ -18,11 +17,10 @@
     </div>
   </header>
 
-  <!-- HERO -->
- <section class="hero">
-  <div class="badge-container">
-    <img src="../recursos/EMPLEA IA LOGO.jpeg" alt="EMPLEA IA" class="badge-logo">
-    <div>
+  <section class="hero">
+    <div class="badge-container">
+      <img src="../recursos/EMPLEA IA LOGO.jpeg" alt="EMPLEA IA" class="badge-logo">
+      <div>
         <span class="badge-label">PORTAL DE EMPRESAS</span>
         <p class="badge-marca">EMPLEA <span class="naranja">IA</span></p>
       </div>
@@ -31,70 +29,74 @@
     <p>Crea tu cuenta empresarial y empieza a reclutar.</p>
   </section>
 
-  <!-- FORMULARIO -->
   <section class="formulario-container">
     <div class="formulario">
 
-      <!-- Nombre -->
-      <div class="campo">
-        <label>NOMBRE DE LA EMPRESA <span class="requerido">*</span></label>
-        <div class="input-grupo">
-          <img src="../recursos/EMPRESANOM.jpeg" alt="" class="input-icono-img">
-          <input type="text" placeholder="Tech Solutions S.A. de C.V.">
+      <form action="http://127.0.0.1:5000/api/empresas/registro" method="POST" autocomplete="off">
+
+        <div class="campo campo-completo">
+          <label>NOMBRE DE LA EMPRESA <span class="requerido">*</span></label>
+          <div class="input-grupo">
+            <img src="../recursos/EMPRESANOM.jpeg" alt="" class="input-icono-img">
+            <input type="text" name="nombre_empresa" placeholder="Tech Solutions S.A. de C.V." required>
+          </div>
+          <p id="error-nombre" class="error-msg"></p>
         </div>
-      </div>
 
-      <!-- Correo -->
-      <div class="campo">
-        <label>CORREO EMPRESARIAL <span class="requerido">*</span></label>
-        <div class="input-grupo">
-          <img src="../recursos/CORREOEMP.jpeg" alt="" class="input-icono-img">
-          <input type="email" placeholder="rh@empresa.mx">
+        <div class="campo campo-completo">
+          <label>CORREO EMPRESARIAL <span class="requerido">*</span></label>
+          <div class="input-grupo">
+            <img src="../recursos/CORREOEMP.jpeg" alt="" class="input-icono-img">
+            <input type="email" name="correo" placeholder="rh@empresa.mx" required>
+          </div>
+          <p id="error-correo" class="error-msg"></p>
         </div>
-      </div>
 
-      <!-- Teléfono -->
-      <div class="campo">
-        <label>TELÉFONO EMPRESARIAL <span class="requerido">*</span></label>
-        <div class="input-grupo">
-          <img src="../recursos/TELEFONOEMP.jpeg" alt="" class="input-icono-img">
-          <input type="tel" placeholder="+52 656 000 0000">
+        <div class="campo campo-completo">
+          <label>TELÉFONO EMPRESARIAL <span class="requerido">*</span></label>
+          <div class="input-grupo">
+            <img src="../recursos/TELEFONOEMP.jpeg" alt="" class="input-icono-img">
+            <input type="tel" name="telefono" placeholder="+52 656 000 0000" required>
+          </div>
+          <p id="error-telefono" class="error-msg"></p>
         </div>
-      </div>
 
-      <!-- Contraseña -->
-      <div class="campo">
-        <label>CONTRASEÑA <span class="requerido">*</span></label>
-        <div class="input-grupo">
-          <img src="../recursos/CONTRASENA EMPR.jpeg" alt="" class="input-icono-img">
-          <input type="password" placeholder="••••••••" id="password">
-          <span class="input-ojo" onclick="mostrarContrasena('password')"></span>
+        <div class="campo">
+          <label>CONTRASEÑA <span class="requerido">*</span></label>
+          <div class="input-grupo">
+            <img src="../recursos/CONTRASENA EMPR.jpeg" alt="" class="input-icono-img">
+            <input type="password" name="contrasena" placeholder="••••••••" id="password" required>
+            <span class="input-ojo" onclick="mostrarContrasena('password')">👁</span>
+          </div>
+          <p id="error-contrasena" class="error-msg"></p>
+          <p style="color: gray; font-size: 12px; margin-top: 4px;">
+
+ <p style="color: gray; font-size: 12px; margin-top: 4px; margin-bottom: 12px; text-align: center;">
+  La contraseña debe tener mínimo 8 caracteres, una mayúscula, un número y un carácter especial (!@#$%^&*)
+</p>
         </div>
-      </div>
 
-      <!-- Confirmar contraseña -->
-      <div class="campo">
-        <label>CONFIRMAR CONTRASEÑA <span class="requerido">*</span></label>
-        <div class="input-grupo">
-          <img src="../recursos/CONTRASENA EMPR.jpeg" alt="" class="input-icono-img">
-          <input type="password" placeholder="••••••••" id="password2">
-          <span class="input-ojo" onclick="mostrarContrasena('password2')"></span>
+        <div class="campo">
+          <label>CONFIRMAR CONTRASEÑA <span class="requerido">*</span></label>
+          <div class="input-grupo">
+            <img src="../recursos/CONTRASENA EMPR.jpeg" alt="" class="input-icono-img">
+            <input type="password" name="confirmar_contrasena" placeholder="••••••••" id="password2" required>
+            <span class="input-ojo" onclick="mostrarContrasena('password2')">👁</span>
+          </div>
+          <p id="error-confirmar" class="error-msg"></p>
         </div>
-      </div>
 
-      <!-- Términos -->
-      <p class="terminos">Al registrarte aceptas los <a href="#" class="naranja">Términos de Servicio</a> y la Política de Privacidad.</p>
+        <p class="terminos">Al registrarte aceptas los <a href="#" class="naranja">Términos de Servicio</a> y la Política de Privacidad.</p>
 
-      <!-- Botón -->
-      <a href="dashboard-empresas.html" class="btn-principal">REGISTRARSE →</a>
+        <button type="submit" class="btn-principal">REGISTRARSE →</button>
 
-      <!-- Link login -->
-      <p class="login-link">¿Ya tienes cuenta? <a href="login-empresas.html" class="naranja">Iniciar sesión</a></p>
+        <p class="login-link">¿Ya tienes cuenta? <a href="login-empresas.html" class="naranja">Iniciar sesión</a></p>
+
+      </form>
 
     </div>
   </section>
 
   <script src="../js/script.js"></script>
-
 </body>
 </html>
