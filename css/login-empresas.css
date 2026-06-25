@@ -48,12 +48,14 @@ body {
   color: var(--blanco);
 }
 
-.naranja { color: var(--naranja); }
+.naranja {
+  color: var(--naranja);
+}
 
 /* HERO */
 .hero {
   background: linear-gradient(180deg, #1a1a1a, #2d1a00);
-  padding: 60px 40px;
+  padding: 30px 40px;
   border-radius: 0 0 30px 30px;
 }
 
@@ -85,7 +87,7 @@ body {
 }
 
 .hero h1 {
-  font-size: 36px;
+  font-size: 32px;
   font-weight: 900;
   color: var(--blanco);
   margin-bottom: 8px;
@@ -99,7 +101,7 @@ body {
 /* FORMULARIO */
 .formulario-container {
   padding: 40px;
-  max-width: 600px;
+  max-width: 700px;
   margin: 0 auto;
 }
 
@@ -107,8 +109,11 @@ body {
   background-color: var(--blanco);
   border-radius: 20px;
   padding: 40px;
-  display: flex;
-  flex-direction: column;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 20px;
 }
 
@@ -118,6 +123,11 @@ body {
   gap: 8px;
 }
 
+/* Campos que ocupan toda la fila */
+.campo-completo {
+  grid-column: 1 / -1;
+}
+
 label {
   font-size: 11px;
   font-weight: bold;
@@ -125,7 +135,9 @@ label {
   letter-spacing: 1px;
 }
 
-.requerido { color: var(--rojo); }
+.requerido {
+  color: var(--rojo);
+}
 
 .input-grupo {
   display: flex;
@@ -135,8 +147,6 @@ label {
   padding: 12px 16px;
   gap: 10px;
 }
-
-.input-icono { font-size: 16px; }
 
 .input-icono-img {
   width: 20px;
@@ -157,20 +167,36 @@ label {
   color: #aaaaaa;
 }
 
-.input-ojo img {
-  width: 20px;
-  height: 20px;
-  object-fit: contain;
+.input-ojo {
   cursor: pointer;
+  font-size: 16px;
+  color: #aaaaaa;
+  user-select: none;
 }
 
-.olvide {
-  font-size: 13px;
-  text-align: right;
+.input-ojo:hover {
+  color: var(--naranja);
+}
+
+.error-msg {
+  font-size: 12px;
+  color: var(--rojo);
+  min-height: 16px;
+}
+
+/* TÉRMINOS */
+.terminos {
+  font-size: 12px;
+  color: var(--texto-secundario);
+  grid-column: 1 / -1;
+  text-align: center;
+}
+
+.terminos a {
   text-decoration: none;
-  font-weight: bold;
 }
 
+/* BOTÓN */
 .btn-principal {
   background-color: var(--naranja);
   color: white;
@@ -179,17 +205,30 @@ label {
   border-radius: 30px;
   font-weight: bold;
   font-size: 16px;
-  text-decoration: none;
-  display: block;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  grid-column: 1 / -1;
 }
 
+.btn-principal:hover {
+  opacity: 0.9;
+}
+
+/* LOGIN LINK */
 .login-link {
   font-size: 13px;
   color: var(--texto-secundario);
   text-align: center;
+  grid-column: 1 / -1;
 }
 
 .login-link a {
   text-decoration: none;
   font-weight: bold;
+}
+.hint-contrasena {
+  font-size: 11px;
+  color: #aaaaaa;
+  line-height: 1.4;
 }

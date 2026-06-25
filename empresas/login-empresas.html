@@ -9,7 +9,6 @@
 </head>
 <body>
 
-  <!-- HEADER -->
   <header class="header">
     <a href="portal-empresas.html" class="btn-volver">← Volver</a>
     <div class="logo">
@@ -18,7 +17,6 @@
     </div>
   </header>
 
-  <!-- HERO -->
   <section class="hero">
     <div class="badge-container">
       <img src="../recursos/EMPLEA IA LOGO.jpeg" alt="EMPLEA IA" class="badge-logo">
@@ -31,41 +29,40 @@
     <p>Accede a tu panel de reclutamiento IA.</p>
   </section>
 
-  <!-- FORMULARIO -->
   <section class="formulario-container">
     <div class="formulario">
+      <form action="http://127.0.0.1:5000/api/empresas/login" method="POST">
 
-      <!-- Campo: correo -->
-      <div class="campo">
-        <label>CORREO EMPRESARIAL <span class="requerido">*</span></label>
-        <div class="input-grupo">
-          <img src="../recursos/CORREOEMP.jpeg" alt="" class="input-icono-img">
-          <input type="email" placeholder="rh@empresa.mx">
+        <div class="campo">
+          <label>CORREO EMPRESARIAL <span class="requerido">*</span></label>
+          <div class="input-grupo">
+            <img src="../recursos/CORREOEMP.jpeg" alt="" class="input-icono-img">
+            <input type="email" name="correo" placeholder="rh@empresa.mx" required>
+          </div>
+          <p id="error-correo" class="error-msg"></p>
         </div>
-      </div>
 
-      <!-- Campo: contraseña -->
-      <div class="input-grupo">
-  <img src="../recursos/CONTRASENA EMPR.jpeg" alt="" class="input-icono-img">
-  <input type="password" placeholder="••••••••" id="password" autocomplete="new-password">
-  <span class="input-ojo" onclick="mostrarContrasena('password')">
-    <img src="../recursos/ojito.jpeg" alt="" class="input-icono-img">
-  </span>
-</div>
-       
+        <div class="campo">
+          <label>CONTRASEÑA <span class="requerido">*</span></label>
+          <div class="input-grupo">
+            <img src="../recursos/CONTRASENA EMPR.jpeg" alt="" class="input-icono-img">
+            <input type="password" name="contrasena" placeholder="••••••••" id="password" autocomplete="new-password" required>
+            <span class="input-ojo" onclick="mostrarContrasena('password')">👁</span>
+          </div>
+          <p id="error-contrasena" class="error-msg"></p>
+          <p class="hint-contrasena">La contraseña debe tener mínimo 8 caracteres, una mayúscula, un número y un carácter especial (!@#$%^&*)</p>
+        </div>
+
         <a href="recuperar-contrasena-empresas.html" class="naranja olvide">¿Olvidaste tu contraseña?</a>
-      </div>
 
-      <!-- Botón -->
-      <a href="dashboard-empresas.html" class="btn-principal">INICIAR SESIÓN →</a>
+        <button type="submit" class="btn-principal">INICIAR SESIÓN →</button>
 
-      <!-- Link registro -->
-      <p class="login-link">¿No tienes cuenta? <a href="registro-empresas.html" class="naranja">Registrar empresa</a></p>
+        <p class="login-link">¿No tienes cuenta? <a href="registro-empresas.html" class="naranja">Registrar empresa</a></p>
 
+      </form>
     </div>
   </section>
 
   <script src="../js/script.js"></script>
-
 </body>
 </html>
