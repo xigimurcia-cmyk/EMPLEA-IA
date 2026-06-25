@@ -15,7 +15,7 @@ app.secret_key = 'emplea-ia-secret-key'
 # Cambia TU_CONTRASENA_MYSQL por tu contrasena de MySQL Workbench
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = 'TU_CONTRASENA_MYSQL'
+app.config['MYSQL_PASSWORD'] = '489350'
 app.config['MYSQL_DB'] = 'emplea_ia'
 app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
 mysql = MySQL(app)

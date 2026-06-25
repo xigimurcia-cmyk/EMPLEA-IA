@@ -1,14 +1,72 @@
 # Importaciones necesarias para las rutas de candidatos
-from flask import Blueprint, request, jsonify, current_app
-from flask_mysqldb import MySQL
+from flask import Blueprint, request, jsonify
+from firebase_admin import auth
 import re
 
 # Blueprint del modulo de candidatos
 candidatos_bp = Blueprint('candidatos', __name__)
 
-# Ruta de registro de candidato
+# ---- VALIDACIONES ----
+
+# Valida que el correo tenga formato correcto
+def validar_correo(correo):
+    patron = r'^[\w\.-]+@[\w\.-]+\.\w+$'
+    return re.match(patron, correo)
+
+# Valida que la contrasena sea segura
+def validar_contrasena(contrasena):
+    if len(contrasena) < 8:
+        return False, 'La contrasena debe tener minimo 8 caracteres'
+    if not any(c.isupper() for c in contrasena):
+        return False, 'Debe tener al menos una letra mayuscula'
+    if not any(c.isdigit() for c in contrasena):
+        return False, 'Debe tener al menos un numero'
+    if not any(c in '!@#$%^&*' for c in contrasena):
+        return False, 'Debe tener al menos un caracter especial (!@#$%^&*)'
+    return True, 'OK'
+
+# ---- RUTAS ----
+
+# Ruta para registrar un candidato nuevo
 @candidatos_bp.route('/api/candidatos/registro', methods=['POST'])
 def registro_candidato():
-    # Por ahorita solo confirma que la ruta funciona
-    # Itzel agrega la logica aqui
-    return jsonify({'mensaje': 'Registro candidato'})
+    from app import mysql
+
+    nombre = request.form['nombre']
+    apellido = request.form['apellido']
+    correo = request.form['correo']
+    contrasena = request.form['contrasena']
+    telefono = request.form['telefono']
+
+    if not validar_correo(correo):
+        return jsonify({'error': 'El correo no tiene formato valido'}), 400
+
+    valida, mensaje = validar_contrasena(contrasena)
+    if not valida:
+        return jsonify({'error': mensaje}), 400
+
+    try:
+        usuario_firebase = auth.create_user(email=correo, password=contrasena)
+    except auth.EmailAlreadyExistsError:
+        return jsonify({'error': 'Este correo ya esta registrado'}), 400
+
+    cursor = mysql.connection.cursor()
+    cursor.execute('INSERT INTO candidatos (nombre, apellido, correo, contrasena, telefono) VALUES (%s, %s, %s, %s, %s)',
+                   (nombre, apellido, correo, contrasena, telefono))
+    mysql.connection.commit()
+    cursor.close()
+
+    return jsonify({'mensaje': 'Candidato registrado exitosamente'}), 201
+
+# Ruta para login de candidato
+@candidatos_bp.route('/api/candidatos/login', methods=['POST'])
+def login_candidato():
+    correo = request.form['correo']
+    contrasena = request.form['contrasena']
+
+    try:
+        usuario = auth.get_user_by_email(correo)
+    except auth.UserNotFoundError:
+        return jsonify({'error': 'Correo o contrasena incorrectos'}), 401
+
+    return jsonify({'mensaje': 'Login exitoso', 'uid': usuario.uid}), 200
