@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registrar Empresa — EMPLEA IA</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/registro-empresas.css">
+</head>
+<body>
+
+  <header class="header">
+    <a href="portal-empresas.html" class="btn-volver">← Volver</a>
+    <div class="logo">
+      <img src="../recursos/EMPLEA IA LOGO.jpeg" alt="EMPLEA IA" class="logo-img">
+      <span class="logo-texto">EMPLEA <span class="naranja">IA</span></span>
+    </div>
+  </header>
+
+  <section class="formulario-container">
+    <div class="formulario">
+      <form id="registroEmpresaForm" autocomplete="off">
+
+        <div class="campo campo-completo">
+          <label>NOMBRE DE LA EMPRESA <span class="requerido">*</span></label>
+          <div class="input-grupo">
+            <input type="text" name="nombre_empresa" placeholder="Tech Solutions S.A. de C.V." required>
+          </div>
+        </div>
+
+        <div class="campo campo-completo">
+          <label>CORREO EMPRESARIAL <span class="requerido">*</span></label>
+          <div class="input-grupo">
+            <input type="email" name="correo" placeholder="rh@empresa.mx" required>
+          </div>
+        </div>
+
+        <div class="campo campo-completo">
+          <label>TELÉFONO EMPRESARIAL <span class="requerido">*</span></label>
+          <div class="input-grupo">
+            <input type="tel" name="telefono" placeholder="+52 656 000 0000" required>
+          </div>
+        </div>
+
+        <div class="campo">
+          <label>CONTRASEÑA <span class="requerido">*</span></label>
+          <div class="input-grupo">
+            <input type="password" name="contrasena" placeholder="••••••••" id="password" required>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-principal">REGISTRARSE →</button>
+
+      </form>
+    </div>
+  </section>
+
+  <script>
+    document.getElementById('registroEmpresaForm').addEventListener('submit', async (e) => {
+        e.preventDefault(); // Evita que la página se recargue
+
+        const datos = {
+            nombre_empresa: document.querySelector('input[name="nombre_empresa"]').value,
+            correo: document.querySelector('input[name="correo"]').value,
+            telefono: document.querySelector('input[name="telefono"]').value,
+            contrasena: document.getElementById('password').value
+        };
+
+        try {
+            const respuesta = await fetch('http://127.0.0.1:5000/api/empresas/registro', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(datos)
+            });
+
+            const resultado = await respuesta.json();
+            
+            if (respuesta.ok) {
+                alert('¡Empresa registrada exitosamente!');
+                window.location.href = 'portal-empresas.html';
+            } else {
+                alert('Error: ' + resultado.error);
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            alert('Error al conectar con el servidor');
+        }
+    });
+  </script>
+</body>
+</html>
