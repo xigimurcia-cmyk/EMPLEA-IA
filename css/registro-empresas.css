@@ -98,20 +98,19 @@ body {
   color: #aaaaaa;
 }
 
-/* FORMULARIO */
 .formulario-container {
   padding: 40px;
   max-width: 700px;
   margin: 0 auto;
+  display: flex;
+  justify-content: center;
 }
 
 .formulario {
   background-color: var(--blanco);
   border-radius: 20px;
   padding: 40px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  width: 100%;
 }
 
 .campo {
@@ -182,7 +181,6 @@ label {
   text-decoration: none;
 }
 
-/* BOTÓN */
 .btn-principal {
   background-color: var(--naranja);
   color: white;
@@ -191,17 +189,19 @@ label {
   border-radius: 30px;
   font-weight: bold;
   font-size: 16px;
-  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  width: 100%;
   display: block;
-  grid-column: 1 / -1;
+  margin: 0 auto;
 }
 
-/* LOGIN LINK */
 .login-link {
   font-size: 13px;
   color: var(--texto-secundario);
   text-align: center;
-  grid-column: 1 / -1;
+  grid-column: unset;
+  width: 100%;
 }
 
 .login-link a {
