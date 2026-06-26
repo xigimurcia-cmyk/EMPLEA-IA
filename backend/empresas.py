@@ -29,7 +29,7 @@ def registro_empresa():
         cur = mysql.connection.cursor()
         cur.execute(
             """
-            INSERT INTO empresas (id_empresa, nombre_empresa, correo, telefono)
+            INSERT INTO empresas (firebase_uid, nombre_empresa, correo, telefono)
             VALUES (%s, %s, %s, %s)
             """,
             (uid, nombre, correo, telefono),
@@ -38,6 +38,10 @@ def registro_empresa():
         cur.close()
         return jsonify({"mensaje": "Empresa registrada"}), 201
     except Exception as e:
+        try:
+            auth.delete_user(uid)
+        except Exception:
+            pass
         return jsonify({"error": "Error en BD: " + str(e)}), 500
 
 

@@ -53,10 +53,10 @@ def registro_candidato():
         cur = mysql.connection.cursor()
         cur.execute(
             """
-            INSERT INTO candidatos (id_candidato, nombre, correo, contrasena)
-            VALUES (%s, %s, %s, %s)
+            INSERT INTO candidatos (firebase_uid, nombre, correo)
+            VALUES (%s, %s, %s)
             """,
-            (firebase_uid, nombre, correo, contrasena),
+            (firebase_uid, nombre, correo),
         )
         mysql.connection.commit()
         cur.close()
@@ -69,4 +69,9 @@ def registro_candidato():
         ), 201
 
     except Exception as e:
+        if "firebase_uid" in locals():
+            try:
+                auth.delete_user(firebase_uid)
+            except Exception:
+                pass
         return jsonify({"error": f"Error interno: {str(e)}"}), 500
