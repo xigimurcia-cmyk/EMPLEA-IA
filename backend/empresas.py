@@ -1,15 +1,31 @@
+import re
+
 from firebase_admin import auth
-from flask import Blueprint, jsonify, request
+from flask import Blueprint, jsonify, redirect, request
 
 from extensions import mysql
 
 
 empresas_bp = Blueprint("empresas", __name__)
 
+EMAIL_REGEX = r"^[\w\.-]+@[\w\.-]+\.\w+$"
+
+
+def validar_contrasena(contrasena):
+    if len(contrasena) < 8:
+        return False, "La contrasena debe tener minimo 8 caracteres"
+    if not any(c.isupper() for c in contrasena):
+        return False, "La contrasena debe tener al menos una mayuscula"
+    if not any(c.isdigit() for c in contrasena):
+        return False, "La contrasena debe tener al menos un numero"
+    if not any(c in "!@#$%^&*" for c in contrasena):
+        return False, "La contrasena debe tener al menos un caracter especial (!@#$%^&*)"
+    return True, "OK"
+
 
 @empresas_bp.route("/api/empresas/registro", methods=["POST"])
 def registro_empresa():
-    data = request.get_json() or {}
+    data = request.form if request.form else (request.get_json() or {})
 
     nombre = data.get("nombre_empresa")
     correo = data.get("correo")
@@ -18,6 +34,13 @@ def registro_empresa():
 
     if not nombre or not correo or not contrasena or not telefono:
         return jsonify({"error": "Todos los campos son obligatorios"}), 400
+
+    if not re.match(EMAIL_REGEX, correo):
+        return jsonify({"error": "El formato del correo electronico no es valido"}), 400
+
+    contrasena_valida, mensaje = validar_contrasena(contrasena)
+    if not contrasena_valida:
+        return jsonify({"error": mensaje}), 400
 
     try:
         user = auth.create_user(email=correo, password=contrasena)
@@ -29,15 +52,26 @@ def registro_empresa():
         cur = mysql.connection.cursor()
         cur.execute(
             """
-            INSERT INTO empresas (firebase_uid, nombre_empresa, correo, telefono)
-            VALUES (%s, %s, %s, %s)
+            INSERT INTO usuarios (firebase_uid, correo, tipo)
+            VALUES (%s, %s, %s)
             """,
-            (uid, nombre, correo, telefono),
+            (uid, correo, "empresa"),
+        )
+        id_usuario = cur.lastrowid
+        cur.execute(
+            """
+            INSERT INTO empresas (id_usuario, nombre_empresa, telefono)
+            VALUES (%s, %s, %s)
+            """,
+            (id_usuario, nombre, telefono),
         )
         mysql.connection.commit()
         cur.close()
+        if request.form:
+            return redirect("http://127.0.0.1:5500/empresas/dashboard-empresas.html")
         return jsonify({"mensaje": "Empresa registrada"}), 201
     except Exception as e:
+        mysql.connection.rollback()
         try:
             auth.delete_user(uid)
         except Exception:
@@ -52,10 +86,7 @@ def login_empresa():
     if not correo:
         return jsonify({"error": "El correo es obligatorio"}), 400
 
-    try:
-        usuario = auth.get_user_by_email(correo)
-        return jsonify({"mensaje": "Login exitoso", "uid": usuario.uid}), 200
-    except auth.UserNotFoundError:
-        return jsonify({"error": "Correo o contrasena incorrectos"}), 401
-    except Exception as e:
-        return jsonify({"error": f"Error en Firebase: {str(e)}"}), 400
+    if request.form:
+        return redirect("http://127.0.0.1:5500/empresas/dashboard-empresas.html")
+
+    return jsonify({"mensaje": "Login provisional exitoso"}), 200
