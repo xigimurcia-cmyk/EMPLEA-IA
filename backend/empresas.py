@@ -3,7 +3,7 @@ from firebase_admin import auth
 from extensions import mysql # Importamos desde el nuevo archivo
 
 empresas_bp = Blueprint('empresas', __name__)
-# ... el resto de tu código queda igual
+
 
 empresas_bp = Blueprint('empresas', __name__)
 
