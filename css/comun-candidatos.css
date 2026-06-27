@@ -1,0 +1,320 @@
+/* Estilos comunes para pantallas de candidatos */
+
+html {
+  overflow-y: scroll;
+  scrollbar-gutter: stable;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  background-color: var(--gris-claro);
+  color: var(--texto-principal);
+}
+
+body:has(.sidebar) {
+  padding-left: 275px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.main {
+  margin-left: 0;
+  max-width: 1300px;
+  padding: 28px 32px 100px;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 275px;
+  height: 100vh;
+  background-color: var(--gris-oscuro);
+  display: flex;
+  flex-direction: column;
+  padding: 32px 24px;
+  z-index: 100;
+  overflow-y: auto;
+  border-top: 0;
+}
+
+.sidebar-logo,
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.brand .logo {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar-logo img,
+.brand .logo img,
+.brand img {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.brand .bell {
+  display: none;
+}
+
+.sidebar-logo span,
+.brand h1,
+.brand .logo-orange,
+.brand .logo-white {
+  color: var(--blanco);
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.brand h1 span,
+.brand .logo-orange {
+  color: var(--naranja);
+}
+
+.user-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--gris-medio);
+  padding: 14px;
+  border-radius: 16px;
+  margin-bottom: 16px;
+}
+
+.avatar-sm {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--naranja);
+  color: var(--blanco);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.user-card h3 {
+  color: var(--blanco);
+  font-size: 14px;
+}
+
+.user-card p {
+  color: var(--texto-claro);
+  font-size: 11px;
+}
+
+.progress-box {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  margin-bottom: 24px;
+}
+
+.progress-text {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: var(--texto-claro);
+  margin-bottom: 6px;
+}
+
+.progress-text b {
+  color: var(--naranja);
+}
+
+.progress {
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress span {
+  display: block;
+  height: 100%;
+  width: 87%;
+  background: var(--naranja);
+  border-radius: 999px;
+}
+
+.sidebar-nav,
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.sidebar-nav a,
+.menu a,
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 13px 14px;
+  border-radius: 16px;
+  color: var(--texto-claro);
+  text-decoration: none;
+  font-size: 14px;
+  border: 1px solid transparent;
+}
+
+.sidebar-nav a.active,
+.sidebar-nav a:hover,
+.menu a.active,
+.menu a:hover,
+.menu-item.active,
+.menu-item:hover {
+  background: rgba(255, 122, 0, 0.1);
+  border-color: rgba(255, 122, 0, 0.3);
+  color: var(--naranja);
+}
+
+.menu-icon,
+.nav-icon {
+  color: var(--naranja);
+  font-size: 18px;
+  width: 22px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.sidebar-logout,
+.logout,
+.logout-btn,
+.sidebar-footer a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 14px;
+  border-radius: 16px;
+  color: var(--rojo);
+  text-decoration: none;
+  margin-top: auto;
+  font-size: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background: transparent;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0;
+}
+
+.hero,
+.hero-banner,
+.reg-header {
+  background: radial-gradient(ellipse at 50% 0%, #3D1F00 0%, var(--gris-oscuro) 70%, #0D0804 100%);
+  border-radius: 0 0 28px 28px;
+}
+
+.hero-logo,
+.header-logo-img,
+.logo-img {
+  border-radius: 10px;
+}
+
+.stat-card,
+.vacante-card,
+.postul-card,
+.cita-card,
+.candidato-card,
+.user-card,
+.cv-card,
+.ia-card,
+.notification-card,
+.chat-card,
+.beneficio-card,
+.empresa-card,
+.card,
+.profile-card,
+.vacante-detalle-card,
+.resumen-card,
+.config-item {
+  border-radius: 12px;
+}
+
+.btn-primary,
+.btn-principal,
+.btn-agendar,
+.btn-nueva,
+.btn-publicar-vacante,
+.btn-guardar,
+.btn-contactar,
+.btn-ver,
+.btn-ver-perfil,
+.btn-subir,
+.save,
+.btn-action-primary {
+  background: linear-gradient(135deg, #F09030 0%, var(--naranja) 65%, #C96A18 100%);
+  color: var(--blanco);
+}
+
+.btn-secundario,
+.btn-outline,
+.btn-action-secondary,
+.btn-vacante,
+.filtro-chip,
+.tab-button {
+  border-radius: 999px;
+}
+
+.bottom-nav {
+  display: none;
+}
+
+@media (max-width: 850px) {
+  body {
+    padding-left: 0;
+    padding-bottom: 78px;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .bottom-nav {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--gris-oscuro);
+    padding: 10px 0 14px;
+    z-index: 120;
+  }
+
+  .bottom-nav a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    color: var(--texto-claro);
+    text-decoration: none;
+    font-size: 11px;
+  }
+
+  .bottom-nav a.active,
+  .bottom-nav .nav-item.active {
+    color: var(--naranja);
+  }
+}

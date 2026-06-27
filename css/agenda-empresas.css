@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
 }
 
 body {
@@ -14,9 +14,9 @@ body {
 
 
 .hero {
-  background: linear-gradient(180deg, #1a1a1a, #2d1a00);
-  padding: 24px 24px 32px;
-  border-radius: 0 0 30px 30px;
+  background: radial-gradient(ellipse at 50% 0%, #3D1F00 0%, var(--gris-oscuro) 60%, #0D0804 100%);
+  padding: 32px 28px;
+  border-radius: 0 0 28px 28px;
   position: relative;
   display: flex;
   flex-direction: column;

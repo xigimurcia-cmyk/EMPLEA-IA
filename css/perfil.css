@@ -197,30 +197,52 @@ body {
 /* MAIN */
 
 .main {
-  margin-left: 275px;
-  padding: 0 28px 40px;
+  margin-left: 0;
+  padding: 28px 32px 100px;
+  max-width: 1300px;
+}
+
+.dash-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.dash-sub {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: var(--naranja);
+}
+
+.dash-titulo h2 {
+  color: var(--texto-principal);
+  font-size: 26px;
+  font-weight: 800;
 }
 
 .hero {
-  min-height: 150px;
-  background: radial-gradient(ellipse at 50% 0%, #3D1F00 0%, var(--gris-oscuro) 70%);
-  color: var(--blanco);
-  border-radius: 0 0 28px 28px;
-  padding: 18px 28px;
+  min-height: 132px;
+  background: var(--blanco);
+  color: var(--texto-principal);
+  border-radius: 18px;
+  padding: 22px;
   display: flex;
   align-items: center;
-  gap: 28px;
-  box-shadow: 0 16px 35px rgba(0,0,0,.12);
+  gap: 22px;
+  box-shadow: none;
+  margin-bottom: 24px;
 }
 
 .avatar-xl {
-  width: 92px;
-  height: 92px;
+  width: 72px;
+  height: 72px;
   background: linear-gradient(135deg, var(--naranja-claro), var(--naranja));
-  border-radius: 26px;
+  border-radius: 18px;
   display: grid;
   place-items: center;
-  font-size: 44px;
+  font-size: 34px;
   font-weight: 900;
   position: relative;
   color: var(--blanco);
@@ -243,13 +265,13 @@ body {
 }
 
 .hero-info h2 {
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 900;
 }
 
 .hero-info p {
-  color: var(--texto-claro);
-  margin: 6px 0 18px;
+  color: var(--texto-secundario);
+  margin: 4px 0 14px;
 }
 
 .hero-progress {
@@ -264,8 +286,8 @@ body {
 .stats div {
   width: 118px;
   height: 82px;
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.08);
+  background: var(--gris-claro);
+  border: 1px solid rgba(0,0,0,0.05);
   border-radius: 18px;
   display: grid;
   place-items: center;
@@ -277,17 +299,17 @@ body {
 }
 
 .stats span {
-  color: var(--texto-claro);
+  color: var(--texto-secundario);
   font-size: 12px;
 }
 
 /* CARDS */
 
 .cards-grid {
-  margin-top: 48px;
+  margin-top: 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 18px 26px;
+  gap: 18px 20px;
 }
 
 .card {
@@ -385,13 +407,13 @@ body {
 
   .main {
     margin-left: 0;
-    padding: 0 16px 30px;
+    padding: 18px 16px 90px;
   }
 
   .hero {
     flex-direction: column;
     text-align: center;
-    border-radius: 0 0 24px 24px;
+    border-radius: 24px;
   }
 
   .hero-progress {
@@ -437,6 +459,55 @@ body {
   color: var(--naranja);
 }
 
+/* Alinea Perfil con el mismo sidebar del resto de candidatos. */
+.sidebar {
+  padding: 32px 24px;
+  border-top: 0;
+  overflow-y: auto;
+}
+
+.brand {
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.logo {
+  width: 38px;
+  height: 38px;
+  background: transparent;
+}
+
+.avatar-sm {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  font-size: 13px;
+}
+
+.user-card {
+  background: var(--gris-medio);
+  padding: 14px;
+  border-radius: 16px;
+  margin-bottom: 16px;
+}
+
+.progress-box {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  margin-bottom: 24px;
+}
+
+.logout {
+  background: transparent;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0;
+  border-radius: 16px;
+  padding: 13px 14px;
+}
 .bottom-nav {
   display: none; /* oculto en escritorio, el menú vive en el sidebar */
 }
